@@ -1,0 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:my_portofolio/core/constants/app_colors.dart';
+import 'package:my_portofolio/core/utils/text_styles/text_styles.dart';
+
+class AppThemes {
+  static ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.lightBackground,
+    brightness: Brightness.light,
+    textTheme: TextTheme(titleLarge: AppTextStyles.appBarTitle),
+    primaryColor: AppColors.titleTextColor,
+  );
+}
