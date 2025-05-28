@@ -7,8 +7,8 @@ class CustomProfileImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.15,
-      width: MediaQuery.of(context).size.height * 0.15,
+      height: MediaQuery.of(context).size.height * 0.17,
+      width: MediaQuery.of(context).size.height * 0.16,
       decoration: BoxDecoration(
         border: Border.all(color: Theme.of(context).primaryColor, width: 2),
         borderRadius: BorderRadius.circular(15),

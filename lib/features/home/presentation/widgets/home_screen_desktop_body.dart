@@ -20,25 +20,20 @@ class HomeScreenDesktopBody extends StatelessWidget {
           child: CustomHomeScreenAppBar(),
         ),
         SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.only(
-              left: MediaQuery.of(context).size.width * 0.04,
-              right: MediaQuery.of(context).size.width * 0.04,
-              bottom: MediaQuery.of(context).size.height * 0.05,
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: CustomContainer(child: ProfileInfoSectionBody()),
-                ),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                Expanded(flex: 3, child: CustomContainer()),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                Expanded(flex: 1, child: CustomContainer()),
-              ],
-            ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: MediaQuery.of(context).size.width * 0.04,
+            right: MediaQuery.of(context).size.width * 0.04,
+            bottom: MediaQuery.of(context).size.height * 0.05,
+          ),
+          child: Row(
+            children: [
+              Expanded(flex: 2, child: ProfileInfoSectionBody()),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+              Expanded(flex: 4, child: CustomContainer(child: Column())),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+              Expanded(flex: 1, child: CustomContainer()),
+            ],
           ),
         ),
       ],

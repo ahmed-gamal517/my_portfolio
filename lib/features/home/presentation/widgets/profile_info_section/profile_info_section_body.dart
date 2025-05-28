@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_personal_info_conatiner.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_personal_name_widget.dart';
@@ -16,6 +17,7 @@ class ProfileInfoSectionBody extends StatelessWidget {
       clipBehavior: Clip.none,
       alignment: Alignment.topCenter,
       children: [
+        CustomContainer(height: MediaQuery.of(context).size.height * 0.7),
         Positioned(
           top: MediaQuery.of(context).size.height * 0.07 * -1,
           child: Column(
@@ -25,11 +27,11 @@ class ProfileInfoSectionBody extends StatelessWidget {
               CustomPersonalNameWidget(),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               CustomPersonalTitleWidget(),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               CustomSocialMediaLinksWidget(),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               CustomPersonalInfoContainer(),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               CustomProfileInfoButton(),
             ],
           ),
