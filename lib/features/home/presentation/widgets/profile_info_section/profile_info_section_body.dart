@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_personal_info_conatiner.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_personal_name_widget.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_personal_title_widget.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_profile_image_widget.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_profile_info_button.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_social_media_links_widget.dart';
+
+class ProfileInfoSectionBody extends StatelessWidget {
+  const ProfileInfoSectionBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      clipBehavior: Clip.none,
+      alignment: Alignment.topCenter,
+      children: [
+        Positioned(
+          top: MediaQuery.of(context).size.height * 0.07 * -1,
+          child: Column(
+            children: [
+              CustomProfileImageWidget(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              CustomPersonalNameWidget(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              CustomPersonalTitleWidget(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              CustomSocialMediaLinksWidget(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              CustomPersonalInfoContainer(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              CustomProfileInfoButton(),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

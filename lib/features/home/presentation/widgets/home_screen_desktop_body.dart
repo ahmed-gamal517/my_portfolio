@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/utils/size_config/size_config.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_home_screen_app_bar.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/profile_info_section_body.dart';
 
 class HomeScreenDesktopBody extends StatelessWidget {
   const HomeScreenDesktopBody({super.key});
@@ -13,9 +15,31 @@ class HomeScreenDesktopBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width * 0.15,
-            vertical: MediaQuery.of(context).size.height * 0.07,
+            vertical: MediaQuery.of(context).size.height * 0.05,
           ),
           child: CustomHomeScreenAppBar(),
+        ),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width * 0.04,
+              right: MediaQuery.of(context).size.width * 0.04,
+              bottom: MediaQuery.of(context).size.height * 0.05,
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: CustomContainer(child: ProfileInfoSectionBody()),
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                Expanded(flex: 3, child: CustomContainer()),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                Expanded(flex: 1, child: CustomContainer()),
+              ],
+            ),
+          ),
         ),
       ],
     );

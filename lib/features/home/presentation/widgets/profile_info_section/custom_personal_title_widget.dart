@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:my_portofolio/core/constants/app_colors.dart';
+import 'package:my_portofolio/core/constants/app_strings.dart';
+import 'package:my_portofolio/core/widgets/responsive_text.dart';
+
+class CustomPersonalTitleWidget extends StatelessWidget {
+  const CustomPersonalTitleWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: MediaQuery.of(context).size.width * 0.01,
+        vertical: MediaQuery.of(context).size.height * 0.005,
+      ),
+      decoration: BoxDecoration(
+        border: Border.all(width: 0.5, color: Theme.of(context).primaryColor),
+        borderRadius: BorderRadius.circular(5),
+        color: AppColors.lightBackground,
+      ),
+      child: ResponsiveText(
+        text: AppStrings.personalTitle,
+        baseFontSize: 16,
+        style: Theme.of(context).textTheme.labelMedium,
+      ),
+    );
+  }
+}

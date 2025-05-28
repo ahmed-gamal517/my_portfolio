@@ -7,6 +7,21 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.titleTextColor,
   );
+  static TextStyle personalName = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w700,
+    color: Colors.black,
+  );
+  static TextStyle personalTitle = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    color: Colors.black,
+  );
+  static TextStyle btnText = TextStyle(
+    fontFamily: 'Sigmar_One',
+    fontWeight: FontWeight.w700,
+    color: AppColors.btnTextColor,
+  );
 
   // static double getResponsiveFontSize(BuildContext context, double fontSize) {
   //   double scaleFactor = getScaleFactor(context);

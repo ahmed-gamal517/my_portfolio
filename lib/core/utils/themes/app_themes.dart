@@ -6,7 +6,12 @@ class AppThemes {
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.lightBackground,
     brightness: Brightness.light,
-    textTheme: TextTheme(titleLarge: AppTextStyles.appBarTitle),
+    textTheme: TextTheme(
+      titleLarge: AppTextStyles.appBarTitle, //Website Name
+      labelLarge: AppTextStyles.personalName, //Personal Name
+      labelMedium: AppTextStyles.personalTitle, //Personal Title and info
+      headlineMedium: AppTextStyles.btnText,
+    ),
     primaryColor: AppColors.titleTextColor,
   );
 }
