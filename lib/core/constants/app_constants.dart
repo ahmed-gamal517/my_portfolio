@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_assets.dart';
+import 'package:my_portofolio/features/home/data/models/page_info_model.dart';
 import 'package:my_portofolio/features/home/data/models/personal_info_model.dart';
 import 'package:my_portofolio/features/home/data/models/social_media_model.dart';
 
@@ -24,4 +25,12 @@ List<PersonalInfoModel> personalInfoList = [
   ),
   PersonalInfoModel(logoPath: AppAssets.gpsIcon, text: 'Cairo, Egypt'),
   PersonalInfoModel(logoPath: AppAssets.calenderIcon, text: '1, Jan. 2001'),
+];
+
+List<PageInfoModel> pageInfoList = [
+  PageInfoModel(title: 'About', logoPath: AppAssets.aboutIcon),
+  PageInfoModel(title: 'Experience', logoPath: AppAssets.expericeIcon),
+  PageInfoModel(title: 'Projects', logoPath: AppAssets.projectsIcon),
+  PageInfoModel(title: 'Skills', logoPath: AppAssets.skillsIcon),
+  PageInfoModel(title: 'Contact', logoPath: AppAssets.contactIcon),
 ];

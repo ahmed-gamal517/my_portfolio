@@ -6,5 +6,10 @@ class AppAssets {
   static const String gpsIcon = 'assets/icons/location.svg';
   static const String calenderIcon = 'assets/icons/calender.svg';
   static const String gitHubIcon = 'assets/icons/github.svg';
+  static const String aboutIcon = 'assets/icons/profile.svg';
+  static const String expericeIcon = 'assets/icons/experience.svg';
+  static const String projectsIcon = 'assets/icons/projects.svg';
+  static const String skillsIcon = 'assets/icons/skills.svg';
+  static const String contactIcon = 'assets/icons/contact.svg';
   static const String personalImg = 'assets/images/personal_img.jpeg';
 }

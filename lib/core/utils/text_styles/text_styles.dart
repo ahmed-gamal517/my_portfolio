@@ -22,6 +22,11 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w700,
     color: AppColors.btnTextColor,
   );
+  static TextStyle pageInfoTitle = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+    color: Colors.black,
+  );
 
   // static double getResponsiveFontSize(BuildContext context, double fontSize) {
   //   double scaleFactor = getScaleFactor(context);

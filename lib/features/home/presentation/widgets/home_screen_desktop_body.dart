@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/utils/size_config/size_config.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_home_screen_app_bar.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/page_info_section/page_info_body.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/profile_info_section_body.dart';
 
 class HomeScreenDesktopBody extends StatelessWidget {
@@ -32,7 +33,12 @@ class HomeScreenDesktopBody extends StatelessWidget {
               SizedBox(width: MediaQuery.of(context).size.width * 0.05),
               Expanded(flex: 4, child: CustomContainer(child: Column())),
               SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-              Expanded(flex: 1, child: CustomContainer()),
+              CustomContainer(
+                padding: EdgeInsetsDirectional.all(
+                  MediaQuery.of(context).size.height * 0.03,
+                ),
+                child: PageInfoBody(),
+              ),
             ],
           ),
         ),
