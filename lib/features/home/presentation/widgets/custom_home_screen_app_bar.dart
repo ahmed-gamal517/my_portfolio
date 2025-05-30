@@ -14,7 +14,7 @@ class CustomHomeScreenAppBar extends StatelessWidget {
       children: [
         ResponsiveText(
           text: AppStrings.appBarTitle,
-          baseFontSize: 38,
+          baseFontSize: 28,
           style: Theme.of(context).textTheme.titleLarge,
         ),
         CircleAvatar(

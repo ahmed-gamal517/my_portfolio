@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/utils/size_config/size_config.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/about_me_section/about_me_section_body.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_home_screen_app_bar.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/page_info_section/page_info_body.dart';
@@ -20,7 +21,7 @@ class HomeScreenDesktopBody extends StatelessWidget {
           ),
           child: CustomHomeScreenAppBar(),
         ),
-        SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.02),
         Padding(
           padding: EdgeInsets.only(
             left: MediaQuery.of(context).size.width * 0.04,
@@ -31,7 +32,7 @@ class HomeScreenDesktopBody extends StatelessWidget {
             children: [
               Expanded(flex: 2, child: ProfileInfoSectionBody()),
               SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-              Expanded(flex: 4, child: CustomContainer(child: Column())),
+              Expanded(flex: 5, child: AboutMeSectionBody()),
               SizedBox(width: MediaQuery.of(context).size.width * 0.05),
               CustomContainer(
                 padding: EdgeInsetsDirectional.all(

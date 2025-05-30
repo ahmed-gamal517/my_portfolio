@@ -11,7 +11,7 @@ class CustomPersonalNameWidget extends StatelessWidget {
       text: AppStrings.personalName,
       style: Theme.of(context).textTheme.labelLarge,
       maxLines: 2,
-      baseFontSize: 26,
+      baseFontSize: 16,
     );
   }
 }

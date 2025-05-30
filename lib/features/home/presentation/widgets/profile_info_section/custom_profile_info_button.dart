@@ -23,7 +23,7 @@ class CustomProfileInfoButton extends StatelessWidget {
       color: AppColors.btnColor,
       child: ResponsiveText(
         text: AppStrings.btnText,
-        baseFontSize: 22,
+        baseFontSize: 14,
         style: Theme.of(context).textTheme.headlineMedium,
       ),
     );

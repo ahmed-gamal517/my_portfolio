@@ -17,14 +17,24 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: Colors.black,
   );
-  static TextStyle btnText = TextStyle(
+  static TextStyle sigmarBold = TextStyle(
     fontFamily: 'Sigmar_One',
     fontWeight: FontWeight.w700,
     color: AppColors.btnTextColor,
   );
-  static TextStyle pageInfoTitle = TextStyle(
+  static TextStyle poppinsMedium = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
+    color: Colors.black,
+  );
+  static TextStyle poppinsBold = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w700,
+    color: Colors.black,
+  );
+  static TextStyle poppinsRegular = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w400,
     color: Colors.black,
   );
 

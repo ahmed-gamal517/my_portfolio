@@ -20,7 +20,7 @@ class CustomPersonalTitleWidget extends StatelessWidget {
       ),
       child: ResponsiveText(
         text: AppStrings.personalTitle,
-        baseFontSize: 16,
+        baseFontSize: 14,
         style: Theme.of(context).textTheme.labelMedium,
       ),
     );

@@ -10,8 +10,10 @@ class AppThemes {
       titleLarge: AppTextStyles.appBarTitle, //Website Name
       labelLarge: AppTextStyles.personalName, //Personal Name
       labelMedium: AppTextStyles.personalTitle, //Personal Title and info
-      headlineMedium: AppTextStyles.btnText, //Button
-      labelSmall: AppTextStyles.pageInfoTitle, //Page Info
+      headlineMedium: AppTextStyles.sigmarBold, //Button
+      labelSmall: AppTextStyles.poppinsMedium, //Page Info
+      titleMedium: AppTextStyles.poppinsBold, //About Me Title
+      bodyMedium: AppTextStyles.poppinsRegular, //About Me Body
     ),
     primaryColor: AppColors.titleTextColor,
   );

@@ -18,37 +18,32 @@ class ResponsiveText extends StatelessWidget {
     this.overflow,
   });
 
-  double _getResponsiveFontSize(double screenWidth) {
-    double scaleFactor;
-
-    if (screenWidth < 700) {
-      // Mobile
-      scaleFactor = screenWidth / 550;
-    } else if (screenWidth < 1200) {
-      // Tablet
-      scaleFactor = screenWidth / 1000;
-    } else {
-      // Desktop
-      scaleFactor = screenWidth / 1920;
-    }
-
-    double responsiveFontSize = baseFontSize * scaleFactor;
-    return responsiveFontSize.clamp(baseFontSize * 0.8, baseFontSize * 1.2);
+  double _getScaleFactor(double width) {
+    if (width < 600) return width / 390; // Mobile
+    if (width < 1024) return width / 768; // Tablet
+    return width / 1440; // Desktop
   }
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final responsiveFontSize = _getResponsiveFontSize(screenWidth);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final scaleFactor = _getScaleFactor(constraints.maxWidth);
+        final scaledFontSize = (baseFontSize * scaleFactor).clamp(
+          baseFontSize * 0.8,
+          baseFontSize * 1.2,
+        );
 
-    return Text(
-      text,
-      textAlign: textAlign,
-      maxLines: maxLines,
-      overflow: overflow,
-      style:
-          style?.copyWith(fontSize: responsiveFontSize) ??
-          TextStyle(fontSize: responsiveFontSize),
+        return Text(
+          text,
+          style:
+              style?.copyWith(fontSize: scaledFontSize) ??
+              TextStyle(fontSize: scaledFontSize),
+          textAlign: textAlign,
+          maxLines: maxLines,
+          overflow: overflow,
+        );
+      },
     );
   }
 }

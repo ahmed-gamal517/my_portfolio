@@ -26,7 +26,7 @@ class CustomPersonalInfoListTile extends StatelessWidget {
         SizedBox(width: MediaQuery.of(context).size.width * 0.01),
         ResponsiveText(
           text: text,
-          baseFontSize: 15,
+          baseFontSize: 10,
           style: Theme.of(context).textTheme.labelMedium,
         ),
       ],
