@@ -31,7 +31,7 @@ class ResponsiveText extends StatelessWidget {
         final scaleFactor = _getScaleFactor(constraints.maxWidth);
         final scaledFontSize = (baseFontSize * scaleFactor).clamp(
           baseFontSize * 0.8,
-          baseFontSize * 1.2,
+          baseFontSize * 1.0,
         );
 
         return Text(

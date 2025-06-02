@@ -16,19 +16,19 @@ class AboutMeSectionBody extends StatelessWidget {
         children: [
           ResponsiveText(
             text: AppStrings.aboutMeSectionTitle,
-            baseFontSize: 16,
+            baseFontSize: 18,
             style: Theme.of(context).textTheme.titleMedium,
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           ResponsiveText(
             text: AppStrings.aboutMeSectionBody,
-            baseFontSize: 12,
+            baseFontSize: 14,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           ResponsiveText(
             text: AppStrings.aboutMeSectionTitle2,
-            baseFontSize: 16,
+            baseFontSize: 18,
             style: Theme.of(context).textTheme.titleMedium,
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),

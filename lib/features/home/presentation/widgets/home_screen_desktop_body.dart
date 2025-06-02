@@ -12,38 +12,40 @@ class HomeScreenDesktopBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-    return Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.15,
-            vertical: MediaQuery.of(context).size.height * 0.05,
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.15,
+              vertical: MediaQuery.of(context).size.height * 0.05,
+            ),
+            child: CustomHomeScreenAppBar(),
           ),
-          child: CustomHomeScreenAppBar(),
-        ),
-        SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-        Padding(
-          padding: EdgeInsets.only(
-            left: MediaQuery.of(context).size.width * 0.04,
-            right: MediaQuery.of(context).size.width * 0.04,
-            bottom: MediaQuery.of(context).size.height * 0.05,
-          ),
-          child: Row(
-            children: [
-              Expanded(flex: 2, child: ProfileInfoSectionBody()),
-              SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-              Expanded(flex: 5, child: AboutMeSectionBody()),
-              SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-              CustomContainer(
-                padding: EdgeInsetsDirectional.all(
-                  MediaQuery.of(context).size.height * 0.03,
+          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+          Padding(
+            padding: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width * 0.04,
+              right: MediaQuery.of(context).size.width * 0.04,
+              bottom: MediaQuery.of(context).size.height * 0.05,
+            ),
+            child: Row(
+              children: [
+                Expanded(flex: 2, child: ProfileInfoSectionBody()),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                Expanded(flex: 5, child: AboutMeSectionBody()),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                CustomContainer(
+                  padding: EdgeInsetsDirectional.all(
+                    MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  child: PageInfoBody(),
                 ),
-                child: PageInfoBody(),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

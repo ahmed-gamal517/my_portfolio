@@ -11,5 +11,8 @@ class AppAssets {
   static const String projectsIcon = 'assets/icons/projects.svg';
   static const String skillsIcon = 'assets/icons/skills.svg';
   static const String contactIcon = 'assets/icons/contact.svg';
+  // images
   static const String personalImg = 'assets/images/personal_img.jpeg';
+  static const String flutterAppDevelopment =
+      'assets/images/flutter_app_development.png';
 }
