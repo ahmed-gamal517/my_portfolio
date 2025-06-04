@@ -10,7 +10,7 @@ class CustomWhatIDoImageWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.065,
       child: ClipRRect(
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        borderRadius: BorderRadiusGeometry.only(
+        borderRadius: const BorderRadiusGeometry.only(
           bottomLeft: Radius.circular(15),
           topLeft: Radius.circular(15),
         ),

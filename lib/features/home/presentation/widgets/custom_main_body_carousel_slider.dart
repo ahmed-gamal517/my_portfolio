@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/about_me_section/about_me_section_body.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/experience_section/experience_view.dart';
 
 class CustomMainBodyCarouselSlider extends StatelessWidget {
   const CustomMainBodyCarouselSlider({super.key});
@@ -15,7 +16,7 @@ class CustomMainBodyCarouselSlider extends StatelessWidget {
           viewportFraction: 1,
           enableInfiniteScroll: false,
         ),
-        items: [AboutMeSectionBody(), AboutMeSectionBody()],
+        items: [const AboutMeSectionBody(), const ExperienceView()],
       ),
     );
   }

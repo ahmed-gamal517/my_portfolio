@@ -5,6 +5,6 @@ class HomeScreenTabletBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Tablet'));
+    return const Center(child: Text('Tablet'));
   }
 }

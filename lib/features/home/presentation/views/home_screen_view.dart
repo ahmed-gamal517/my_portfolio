@@ -7,6 +7,6 @@ class HomeScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomeScreenViewBody();
+    return const HomeScreenViewBody();
   }
 }

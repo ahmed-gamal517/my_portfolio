@@ -36,7 +36,7 @@ class AboutMeSectionBody extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium,
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          CustomWhatIDoContainer(),
+          const CustomWhatIDoContainer(),
         ],
       ),
     );

@@ -19,7 +19,7 @@ class CustomPersonalInfoListTile extends StatelessWidget {
           width: MediaQuery.of(context).size.height * 0.05,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            color: Color(0xffD9D9D9),
+            color: const Color(0xffD9D9D9),
           ),
           child: SvgPicture.asset(iconPath, fit: BoxFit.scaleDown),
         ),

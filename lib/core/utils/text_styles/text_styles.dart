@@ -2,39 +2,44 @@ import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_colors.dart';
 
 abstract class AppTextStyles {
-  static TextStyle appBarTitle = TextStyle(
+  static TextStyle appBarTitle = const TextStyle(
     fontFamily: 'Sigmar_One',
     fontWeight: FontWeight.w400,
     color: AppColors.titleTextColor,
   );
-  static TextStyle personalName = TextStyle(
+  static TextStyle personalName = const TextStyle(
     fontFamily: 'Inter',
     fontWeight: FontWeight.w700,
     color: Colors.black,
   );
-  static TextStyle personalTitle = TextStyle(
+  static TextStyle personalTitle = const TextStyle(
     fontFamily: 'Inter',
     fontWeight: FontWeight.w500,
     color: Colors.black,
   );
-  static TextStyle sigmarBold = TextStyle(
+  static TextStyle sigmarBold = const TextStyle(
     fontFamily: 'Sigmar_One',
     fontWeight: FontWeight.w700,
     color: AppColors.btnTextColor,
   );
-  static TextStyle poppinsMedium = TextStyle(
+  static TextStyle poppinsMedium = const TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w500,
     color: Colors.black,
   );
-  static TextStyle poppinsBold = TextStyle(
+  static TextStyle poppinsBold = const TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w700,
     color: Colors.black,
   );
-  static TextStyle poppinsRegular = TextStyle(
+  static TextStyle poppinsRegular = const TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w400,
+    color: Colors.black,
+  );
+  static TextStyle poppinsSemiBold = const TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
     color: Colors.black,
   );
 

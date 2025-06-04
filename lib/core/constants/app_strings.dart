@@ -4,6 +4,8 @@ class AppStrings {
   static const String personalName = 'Ahmed Gamal Abd El Fatah';
   static const String personalTitle = 'Flutter Developer';
   static const String btnText = 'View Resume';
+
+  // About Me
   static const String aboutMeSectionTitle = 'About Me';
   static const String aboutMeSectionTitle2 = 'What I Do';
   static const String aboutMeSectionBody =
@@ -12,5 +14,12 @@ I have completed several professional courses in Flutter and have gained hands-o
 With a solid foundation in both theory and practice, I am now actively seeking opportunities to contribute as a Flutter Developer. I'm eager to work on impactful projects, collaborate with talented teams, and continue growing in the ever-evolving tech landscape. ''';
   static const String whatIdo = 'Flutter App Development';
   static const String whatIdoBody =
-      "Proficient in Flutter and Firebase, I build cross-platform, high-performance mobile apps with real-time data and seamless backend integration.";
+      "Proficient in Flutter and Firebase, I build cross-platform, high-performance mobile apps with real-time data and seamless backend integration.";
+
+  // Education
+  static const String educationTitle = 'Education';
+  static const String universityName =
+      "Modern University for Technology and Information (MTI)";
+  static const String universityDegree = "Bachelor's in Computer Science";
+  static const String universityGraduationYear = "2019 - 2023";
 }

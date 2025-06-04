@@ -11,15 +11,15 @@ class HomeScreenDesktopView extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return SingleChildScrollView(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       child: Column(
         children: [
-          SlideInWidget(
+          const SlideInWidget(
             direction: SlideDirection.top,
             child: CustomHomeScreenAppBar(),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-          HomeScreenDesktopViewBody(),
+          const HomeScreenDesktopViewBody(),
         ],
       ),
     );

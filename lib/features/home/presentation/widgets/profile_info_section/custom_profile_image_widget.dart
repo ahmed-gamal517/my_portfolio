@@ -12,7 +12,7 @@ class CustomProfileImageWidget extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(color: Theme.of(context).primaryColor, width: 2),
         borderRadius: BorderRadius.circular(15),
-        image: DecorationImage(
+        image: const DecorationImage(
           image: AssetImage(AppAssets.personalImg),
           fit: BoxFit.cover,
         ),

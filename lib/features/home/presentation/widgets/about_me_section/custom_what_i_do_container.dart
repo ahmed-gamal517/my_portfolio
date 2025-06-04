@@ -13,14 +13,14 @@ class CustomWhatIDoContainer extends StatelessWidget {
       width: MediaQuery.of(context).size.height * 0.45,
       decoration: BoxDecoration(
         border: Border.all(color: Theme.of(context).primaryColor, width: 2),
-        color: Color(0xffFDF4F4),
+        color: const Color(0xffFDF4F4),
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
         spacing: MediaQuery.of(context).size.width * 0.01,
         children: [
-          CustomWhatIDoImageWidget(),
-          Expanded(child: CustomWhatIDoContainerBody()),
+          const CustomWhatIDoImageWidget(),
+          const Expanded(child: CustomWhatIDoContainerBody()),
         ],
       ),
     );

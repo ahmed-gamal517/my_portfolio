@@ -8,7 +8,7 @@ List<SocialMediaModel> socialMediaList = [
   SocialMediaModel(
     logoPath: AppAssets.linkedInIcon,
     link: 'https://www.linkedin.com/in/ahmedgamal517/',
-    borderColor: Color(0xff3662e3),
+    borderColor: const Color(0xff3662e3),
   ),
   SocialMediaModel(
     logoPath: AppAssets.gitHubIcon,

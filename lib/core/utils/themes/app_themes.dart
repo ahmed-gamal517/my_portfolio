@@ -14,6 +14,7 @@ class AppThemes {
       labelSmall: AppTextStyles.poppinsMedium, //Page Info
       titleMedium: AppTextStyles.poppinsBold, //About Me Title
       bodyMedium: AppTextStyles.poppinsRegular, //About Me Body
+      bodyLarge: AppTextStyles.poppinsSemiBold,
     ),
     primaryColor: AppColors.titleTextColor,
   );

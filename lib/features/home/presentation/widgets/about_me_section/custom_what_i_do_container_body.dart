@@ -27,7 +27,7 @@ class CustomWhatIDoContainerBody extends StatelessWidget {
             maxFontSize: 10,
             style: Theme.of(
               context,
-            ).textTheme.bodyMedium!.copyWith(color: Color(0xff685D5D)),
+            ).textTheme.bodyMedium!.copyWith(color: const Color(0xff685D5D)),
           ),
         ),
       ],

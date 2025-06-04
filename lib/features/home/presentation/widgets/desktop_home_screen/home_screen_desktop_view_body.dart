@@ -18,7 +18,7 @@ class HomeScreenDesktopViewBody extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             flex: 2,
             child: SlideInWidget(
               direction: SlideDirection.left,
@@ -26,7 +26,7 @@ class HomeScreenDesktopViewBody extends StatelessWidget {
             ),
           ),
           SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-          Expanded(
+          const Expanded(
             flex: 5,
             child: SlideInWidget(
               direction: SlideDirection.bottom,
@@ -40,7 +40,7 @@ class HomeScreenDesktopViewBody extends StatelessWidget {
               padding: EdgeInsetsDirectional.all(
                 MediaQuery.of(context).size.height * 0.03,
               ),
-              child: PageInfoBody(),
+              child: const PageInfoBody(),
             ),
           ),
         ],
