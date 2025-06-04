@@ -9,25 +9,31 @@ class CustomHomeScreenAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        ResponsiveText(
-          text: AppStrings.appBarTitle,
-          baseFontSize: 28,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
-        CircleAvatar(
-          backgroundColor: Theme.of(context).primaryColor,
-          radius: MediaQuery.of(context).size.width * 0.015,
-          child: SvgPicture.asset(
-            AppAssets.lightSvgIcon,
-            fit: BoxFit.scaleDown,
-            width: MediaQuery.of(context).size.width * 0.015,
-            height: MediaQuery.of(context).size.width * 0.015,
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: MediaQuery.of(context).size.width * 0.15,
+        vertical: MediaQuery.of(context).size.height * 0.05,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ResponsiveText(
+            text: AppStrings.appBarTitle,
+            baseFontSize: 28,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
-        ),
-      ],
+          CircleAvatar(
+            backgroundColor: Theme.of(context).primaryColor,
+            radius: MediaQuery.of(context).size.width * 0.015,
+            child: SvgPicture.asset(
+              AppAssets.lightSvgIcon,
+              fit: BoxFit.scaleDown,
+              width: MediaQuery.of(context).size.width * 0.015,
+              height: MediaQuery.of(context).size.width * 0.015,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
 import 'package:my_portofolio/core/widgets/responsive_text.dart';
@@ -20,10 +21,13 @@ class AboutMeSectionBody extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium,
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          ResponsiveText(
-            text: AppStrings.aboutMeSectionBody,
-            baseFontSize: 14,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Expanded(
+            child: AutoSizeText(
+              AppStrings.aboutMeSectionBody,
+              maxFontSize: 13,
+              minFontSize: 8,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           ResponsiveText(
