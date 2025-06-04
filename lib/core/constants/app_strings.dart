@@ -22,4 +22,10 @@ With a solid foundation in both theory and practice, I am now actively seeking o
       "Modern University for Technology and Information (MTI)";
   static const String universityDegree = "Bachelor's in Computer Science";
   static const String universityGraduationYear = "2019 - 2023";
+
+  // Experience
+  static const String experienceTitle = 'Experience';
+  static const String experienceCompany = "MTI University";
+  static const String experiencePosition = "Teaching Assistant";
+  static const String experienceDuration = "2023 - Present";
 }

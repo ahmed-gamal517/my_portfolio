@@ -15,4 +15,7 @@ class AppAssets {
   static const String personalImg = 'assets/images/personal_img.jpeg';
   static const String flutterAppDevelopment =
       'assets/images/flutter_app_development.png';
+  static const String universityImage = 'assets/images/university.png';
+  static const String cellulaTechnologiesLogo =
+      'assets/images/cellula_technologies_logo.jpg';
 }

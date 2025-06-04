@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_assets.dart';
+import 'package:my_portofolio/features/home/data/models/experience_model.dart';
 import 'package:my_portofolio/features/home/data/models/page_info_model.dart';
 import 'package:my_portofolio/features/home/data/models/personal_info_model.dart';
 import 'package:my_portofolio/features/home/data/models/social_media_model.dart';
@@ -33,4 +34,18 @@ List<PageInfoModel> pageInfoList = [
   PageInfoModel(title: 'Projects', logoPath: AppAssets.projectsIcon),
   PageInfoModel(title: 'Skills', logoPath: AppAssets.skillsIcon),
   PageInfoModel(title: 'Contact', logoPath: AppAssets.contactIcon),
+];
+List<ExperienceModel> experienceList = [
+  ExperienceModel(
+    company: 'MTI University',
+    role: 'Teaching Assisstant',
+    period: 'Dec 2024 - Present',
+    imagePath: AppAssets.universityImage,
+  ),
+  ExperienceModel(
+    company: 'Cellula Technologies',
+    role: 'Flutter Developer Intern',
+    period: 'Feb 2025 - Mar 2025',
+    imagePath: AppAssets.cellulaTechnologiesLogo,
+  ),
 ];
