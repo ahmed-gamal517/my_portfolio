@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portofolio/core/animations/slide_in.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_main_body_carousel_slider.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/page_info_section/page_info_body.dart';
@@ -17,15 +18,30 @@ class HomeScreenDesktopViewBody extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(flex: 2, child: ProfileInfoSectionBody()),
-          SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-          Expanded(flex: 5, child: CustomMainBodyCarouselSlider()),
-          SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-          CustomContainer(
-            padding: EdgeInsetsDirectional.all(
-              MediaQuery.of(context).size.height * 0.03,
+          Expanded(
+            flex: 2,
+            child: SlideInWidget(
+              direction: SlideDirection.left,
+              child: ProfileInfoSectionBody(),
             ),
-            child: PageInfoBody(),
+          ),
+          SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+          Expanded(
+            flex: 5,
+            child: SlideInWidget(
+              direction: SlideDirection.bottom,
+              child: CustomMainBodyCarouselSlider(),
+            ),
+          ),
+          SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+          SlideInWidget(
+            direction: SlideDirection.right,
+            child: CustomContainer(
+              padding: EdgeInsetsDirectional.all(
+                MediaQuery.of(context).size.height * 0.03,
+              ),
+              child: PageInfoBody(),
+            ),
           ),
         ],
       ),
