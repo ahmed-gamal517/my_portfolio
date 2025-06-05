@@ -28,4 +28,7 @@ With a solid foundation in both theory and practice, I am now actively seeking o
   static const String experienceCompany = "MTI University";
   static const String experiencePosition = "Teaching Assistant";
   static const String experienceDuration = "2023 - Present";
+
+  // Projects
+  static const String projectTitle = 'Projects';
 }

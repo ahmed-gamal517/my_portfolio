@@ -3,6 +3,7 @@ import 'package:my_portofolio/core/constants/app_assets.dart';
 import 'package:my_portofolio/features/home/data/models/experience_model.dart';
 import 'package:my_portofolio/features/home/data/models/page_info_model.dart';
 import 'package:my_portofolio/features/home/data/models/personal_info_model.dart';
+import 'package:my_portofolio/features/home/data/models/projects_model.dart';
 import 'package:my_portofolio/features/home/data/models/social_media_model.dart';
 
 List<SocialMediaModel> socialMediaList = [
@@ -47,5 +48,32 @@ List<ExperienceModel> experienceList = [
     role: 'Flutter Developer Intern',
     period: 'Feb 2025 - Mar 2025',
     imagePath: AppAssets.cellulaTechnologiesLogo,
+  ),
+];
+
+List<ProjectsModel> projectsList = [
+  ProjectsModel(
+    title: 'QuickMart E-Commerce App',
+    linkText: 'GitHub',
+    imagePath: AppAssets.flutterLogo,
+    link: 'https://github.com/ahmed-gamal517/Afwra-QuickMart-Ecommerce-App',
+  ),
+  ProjectsModel(
+    title: 'Out Or Not Ai Weather App',
+    linkText: 'GitHub',
+    imagePath: AppAssets.flutterLogo,
+    link: 'https://github.com/ahmed-gamal517/weather-ai-app',
+  ),
+  ProjectsModel(
+    title: 'Feastly Ai Food Recommendation App',
+    linkText: 'GitHub',
+    imagePath: AppAssets.flutterLogo,
+    link: 'https://github.com/Galal-20/feastly',
+  ),
+  ProjectsModel(
+    title: 'Cattosa Animal Sound Identification App',
+    linkText: 'GitHub',
+    imagePath: AppAssets.flutterLogo,
+    link: 'https://github.com/ahmed-gamal517/cattoosa',
   ),
 ];
