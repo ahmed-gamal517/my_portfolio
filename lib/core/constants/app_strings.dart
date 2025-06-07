@@ -35,4 +35,10 @@ With a solid foundation in both theory and practice, I am now actively seeking o
   // Skills
   static const String skillsTitle = 'Skills';
   static const String toolsAndSoftware = 'Tools & Software';
+
+  // Contact
+  static const String contactTitle = 'Contact';
+  static const String email = 'Email Address';
+  static const String subject = 'Subject';
+  static const String message = 'Message';
 }
