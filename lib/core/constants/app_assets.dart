@@ -19,4 +19,21 @@ class AppAssets {
   static const String cellulaTechnologiesLogo =
       'assets/images/cellula_technologies_logo.jpg';
   static const String flutterLogo = 'assets/images/flutter_logo.png';
+
+  // skills
+  static const String androidStudioLogo =
+      'assets/icons/android_studio_logo.svg';
+  static const String apiIntegerationLogo =
+      'assets/icons/api_integeration_logo.svg';
+  static const String cleanArchitectureLogo =
+      'assets/icons/clean_arch_logo.svg';
+  static const String figmaIcon = 'assets/icons/figma_icon.svg';
+  static const String firebaseIcon = 'assets/icons/firebase_icon.svg';
+  static const String flutterIcon = 'assets/icons/flutter_icon.svg';
+  static const String postmanLogo = 'assets/icons/postman_logo.svg';
+  static const String testingLogo = 'assets/icons/testing_logo.svg';
+  static const String visualStudioCodeLogo =
+      'assets/icons/visual_studio_code_logo.svg';
+  static const String gitIcon = 'assets/icons/git_icon.svg';
+  static const String dartIcon = 'assets/icons/dart_icon.svg';
 }

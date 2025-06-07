@@ -31,4 +31,8 @@ With a solid foundation in both theory and practice, I am now actively seeking o
 
   // Projects
   static const String projectTitle = 'Projects';
+
+  // Skills
+  static const String skillsTitle = 'Skills';
+  static const String toolsAndSoftware = 'Tools & Software';
 }

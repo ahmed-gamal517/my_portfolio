@@ -4,6 +4,7 @@ import 'package:my_portofolio/features/home/data/models/experience_model.dart';
 import 'package:my_portofolio/features/home/data/models/page_info_model.dart';
 import 'package:my_portofolio/features/home/data/models/personal_info_model.dart';
 import 'package:my_portofolio/features/home/data/models/projects_model.dart';
+import 'package:my_portofolio/features/home/data/models/skills_model.dart';
 import 'package:my_portofolio/features/home/data/models/social_media_model.dart';
 
 List<SocialMediaModel> socialMediaList = [
@@ -76,4 +77,26 @@ List<ProjectsModel> projectsList = [
     imagePath: AppAssets.flutterLogo,
     link: 'https://github.com/ahmed-gamal517/cattoosa',
   ),
+];
+
+List<SkillsModel> skills = [
+  SkillsModel(name: 'Dart', iconPath: AppAssets.dartIcon),
+  SkillsModel(name: 'Flutter', iconPath: AppAssets.flutterIcon),
+  SkillsModel(
+    name: 'Clean Architecture',
+    iconPath: AppAssets.cleanArchitectureLogo,
+  ),
+  SkillsModel(name: 'Api Integration', iconPath: AppAssets.apiIntegerationLogo),
+  SkillsModel(name: 'Firebase', iconPath: AppAssets.firebaseIcon),
+  SkillsModel(name: 'Git', iconPath: AppAssets.gitIcon),
+  SkillsModel(name: 'Unit Testing', iconPath: AppAssets.testingLogo),
+];
+
+List<SkillsModel> toolsAndSoftware = [
+  SkillsModel(name: 'VS Code', iconPath: AppAssets.visualStudioCodeLogo),
+  SkillsModel(name: 'Android Studio', iconPath: AppAssets.androidStudioLogo),
+  SkillsModel(name: 'GitHub', iconPath: AppAssets.gitHubIcon),
+
+  SkillsModel(name: 'Postman', iconPath: AppAssets.postmanLogo),
+  SkillsModel(name: 'Figma', iconPath: AppAssets.figmaIcon),
 ];
