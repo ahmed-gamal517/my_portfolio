@@ -18,4 +18,29 @@ class AppThemes {
     ),
     primaryColor: AppColors.titleTextColor,
   );
+  static ThemeData darkTheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.darkBackground,
+    brightness: Brightness.dark,
+    textTheme: TextTheme(
+      titleLarge: AppTextStyles.appBarTitle, //Website Name
+      labelLarge: AppTextStyles.personalName.copyWith(
+        color: Colors.white,
+      ), //Personal Name
+      labelMedium: AppTextStyles.personalTitle.copyWith(
+        color: Colors.white,
+      ), //Personal Title and info
+      headlineMedium: AppTextStyles.sigmarBold, //Button
+      labelSmall: AppTextStyles.poppinsMedium.copyWith(
+        color: Colors.white,
+      ), //Page Info
+      titleMedium: AppTextStyles.poppinsBold.copyWith(
+        color: Colors.white,
+      ), //About Me Title
+      bodyMedium: AppTextStyles.poppinsRegular.copyWith(
+        color: Colors.white,
+      ), //About Me Body
+      bodyLarge: AppTextStyles.poppinsSemiBold.copyWith(color: Colors.white),
+    ),
+    primaryColor: AppColors.titleTextColor,
+  );
 }

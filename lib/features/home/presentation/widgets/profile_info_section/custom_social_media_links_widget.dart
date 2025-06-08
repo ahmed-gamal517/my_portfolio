@@ -15,6 +15,7 @@ class CustomSocialMediaLinksWidget extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.04,
             width: MediaQuery.of(context).size.height * 0.04,
             decoration: BoxDecoration(
+              color: Colors.white,
               border: Border.all(
                 color: socialMediaList[index].borderColor,
                 width: 2,

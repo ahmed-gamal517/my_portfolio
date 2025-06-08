@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
 import 'package:my_portofolio/core/widgets/responsive_text.dart';
+import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 
 class CustomWhatIDoContainerBody extends StatelessWidget {
   const CustomWhatIDoContainerBody({super.key});
@@ -25,9 +27,12 @@ class CustomWhatIDoContainerBody extends StatelessWidget {
             AppStrings.whatIdoBody,
             minFontSize: 5,
             maxFontSize: 10,
-            style: Theme.of(
-              context,
-            ).textTheme.bodyMedium!.copyWith(color: const Color(0xff685D5D)),
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+              color:
+                  BlocProvider.of<ThemeCubit>(context).isDark
+                      ? const Color(0xffD1D1CD)
+                      : const Color(0xff685D5D),
+            ),
           ),
         ),
       ],

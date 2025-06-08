@@ -12,7 +12,7 @@ class CustomProjectsGridView extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 60,
         mainAxisSpacing: 20,
-        mainAxisExtent: 200,
+        mainAxisExtent: 220,
         childAspectRatio: 1,
       ),
       itemBuilder:

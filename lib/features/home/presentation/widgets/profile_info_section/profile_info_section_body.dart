@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_portofolio/core/constants/app_colors.dart';
+import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
+import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_state.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_personal_info_conatiner.dart';
@@ -30,7 +34,16 @@ class ProfileInfoSectionBody extends StatelessWidget {
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               const CustomSocialMediaLinksWidget(),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-              const CustomPersonalInfoContainer(),
+              BlocBuilder<ThemeCubit, ThemeState>(
+                builder: (context, state) {
+                  return CustomPersonalInfoContainer(
+                    containerColor:
+                        BlocProvider.of<ThemeCubit>(context).isDark
+                            ? const Color(0xff3B3729)
+                            : AppColors.lightContainerColor,
+                  );
+                },
+              ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               const CustomProfileInfoButton(),
             ],
