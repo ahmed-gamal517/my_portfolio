@@ -1,6 +1,6 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_portofolio/core/widgets/responsive_text.dart';
 
 class CustomPersonalInfoListTile extends StatelessWidget {
   const CustomPersonalInfoListTile({
@@ -24,10 +24,14 @@ class CustomPersonalInfoListTile extends StatelessWidget {
           child: SvgPicture.asset(iconPath, fit: BoxFit.scaleDown),
         ),
         SizedBox(width: MediaQuery.of(context).size.width * 0.01),
-        ResponsiveText(
-          text: text,
-          baseFontSize: 10,
-          style: Theme.of(context).textTheme.labelMedium,
+        Expanded(
+          child: AutoSizeText(
+            text,
+            maxFontSize: 10,
+            minFontSize: 8,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.labelMedium,
+          ),
         ),
       ],
     );

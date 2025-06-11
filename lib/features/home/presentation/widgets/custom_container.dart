@@ -3,14 +3,22 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 
 class CustomContainer extends StatelessWidget {
-  const CustomContainer({super.key, this.child, this.height, this.padding});
+  const CustomContainer({
+    super.key,
+    this.child,
+    this.height,
+    this.padding,
+    this.width,
+  });
   final Widget? child;
   final double? height;
+  final double? width;
   final EdgeInsetsGeometry? padding;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: height,
+      width: width,
       padding: padding,
       decoration: BoxDecoration(
         color:

@@ -8,6 +8,7 @@ class CustomPersonalInfoContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width * 0.18,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),

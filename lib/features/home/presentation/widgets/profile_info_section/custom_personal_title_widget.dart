@@ -1,8 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/core/constants/app_colors.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
-import 'package:my_portofolio/core/widgets/responsive_text.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_state.dart';
 
@@ -29,9 +29,9 @@ class CustomPersonalTitleWidget extends StatelessWidget {
                     ? const Color(0xff272522)
                     : AppColors.lightBackground,
           ),
-          child: ResponsiveText(
-            text: AppStrings.personalTitle,
-            baseFontSize: 14,
+          child: AutoSizeText(
+            AppStrings.personalTitle,
+            maxFontSize: 14,
             style: Theme.of(context).textTheme.labelMedium,
           ),
         );
