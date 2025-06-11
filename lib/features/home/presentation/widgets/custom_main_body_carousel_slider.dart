@@ -18,6 +18,9 @@ class CustomMainBodyCarouselSlider extends StatelessWidget {
       child: CarouselSlider(
         carouselController: BlocProvider.of<AppCubit>(context).controller,
         options: CarouselOptions(
+          onPageChanged: (index, reason) {
+            BlocProvider.of<AppCubit>(context).pageScrolled(index);
+          },
           scrollDirection: Axis.vertical,
           viewportFraction: 1,
           scrollPhysics: const BouncingScrollPhysics(),

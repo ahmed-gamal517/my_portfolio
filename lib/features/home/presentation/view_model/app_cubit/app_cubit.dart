@@ -19,4 +19,9 @@ class AppCubit extends Cubit<AppState> {
     );
     emit(AppChangePage());
   }
+
+  void pageScrolled(int index) {
+    currPage = index;
+    emit(AppChangePage());
+  }
 }
