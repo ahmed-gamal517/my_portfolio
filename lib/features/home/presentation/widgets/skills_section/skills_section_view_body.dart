@@ -6,11 +6,12 @@ import 'package:my_portofolio/features/home/presentation/widgets/custom_containe
 import 'package:my_portofolio/features/home/presentation/widgets/skills_section/custom_skills_wrap_builder.dart';
 
 class SkillsSectionViewBody extends StatelessWidget {
-  const SkillsSectionViewBody({super.key});
-
+  const SkillsSectionViewBody({super.key, this.height});
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return CustomContainer(
+      height: height,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
       child: CustomScrollView(
         slivers: [

@@ -6,11 +6,12 @@ import 'package:my_portofolio/features/home/presentation/widgets/about_me_sectio
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 
 class AboutMeSectionBody extends StatelessWidget {
-  const AboutMeSectionBody({super.key});
-
+  const AboutMeSectionBody({super.key, this.height});
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return CustomContainer(
+      height: height,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

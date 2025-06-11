@@ -1,7 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_colors.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
-import 'package:my_portofolio/core/widgets/responsive_text.dart';
 
 class CustomProfileInfoButton extends StatelessWidget {
   const CustomProfileInfoButton({super.key});
@@ -10,6 +10,8 @@ class CustomProfileInfoButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: () {},
+      height: MediaQuery.of(context).size.height * 0.05,
+      minWidth: MediaQuery.of(context).size.width * 0.15,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
         side: BorderSide(color: Theme.of(context).primaryColor, width: 1),
@@ -21,9 +23,10 @@ class CustomProfileInfoButton extends StatelessWidget {
       hoverElevation: 0,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.025),
       color: AppColors.btnColor,
-      child: ResponsiveText(
-        text: AppStrings.btnText,
-        baseFontSize: 14,
+      child: AutoSizeText(
+        AppStrings.btnText,
+        maxFontSize: 14,
+        minFontSize: 10,
         style: Theme.of(context).textTheme.headlineMedium,
       ),
     );

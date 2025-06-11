@@ -5,11 +5,13 @@ import 'package:my_portofolio/features/home/presentation/widgets/custom_containe
 import 'package:my_portofolio/features/home/presentation/widgets/projects_section/custom_projects_grid_view.dart';
 
 class ProjectsSectionViewBody extends StatelessWidget {
-  const ProjectsSectionViewBody({super.key});
+  const ProjectsSectionViewBody({super.key, this.height});
 
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return CustomContainer(
+      height: height,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
