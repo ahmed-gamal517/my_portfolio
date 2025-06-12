@@ -14,7 +14,17 @@ class CustomWhatIDoImageWidget extends StatelessWidget {
           bottomLeft: Radius.circular(15),
           topLeft: Radius.circular(15),
         ),
-        child: Image.asset(AppAssets.flutterAppDevelopment, fit: BoxFit.cover),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Image.asset(
+                AppAssets.flutterAppDevelopment,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

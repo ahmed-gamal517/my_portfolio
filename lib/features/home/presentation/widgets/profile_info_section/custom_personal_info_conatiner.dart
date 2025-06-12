@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:my_portofolio/core/constants/app_constants.dart';
+import 'package:my_portofolio/core/utils/size_config/size_config.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_pesonal_info_list_tile.dart';
 
 class CustomPersonalInfoContainer extends StatelessWidget {
@@ -14,7 +16,35 @@ class CustomPersonalInfoContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: containerColor,
       ),
-      child: Column(
+      child: buildContainerItem(context),
+    );
+  }
+
+  Widget buildContainerItem(BuildContext context) {
+    if (SizeConfig.width < 600) {
+      return Wrap(
+        children: List.generate(personalInfoList.length, (index) {
+          return Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: MediaQuery.of(context).size.height * 0.01,
+            ),
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.height * 0.05,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: const Color(0xffD9D9D9),
+              ),
+              child: SvgPicture.asset(
+                personalInfoList[index].logoPath,
+                fit: BoxFit.scaleDown,
+              ),
+            ),
+          );
+        }),
+      );
+    } else {
+      return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(
           personalInfoList.length,
@@ -28,7 +58,7 @@ class CustomPersonalInfoContainer extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
+    }
   }
 }

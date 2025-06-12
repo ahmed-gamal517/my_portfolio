@@ -8,11 +8,11 @@ class CustomProjectsGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 60,
         mainAxisSpacing: 20,
-        mainAxisExtent: 220,
+        mainAxisExtent: MediaQuery.of(context).size.height * 0.3,
         childAspectRatio: 1,
       ),
       itemBuilder:

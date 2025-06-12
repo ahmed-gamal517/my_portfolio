@@ -22,7 +22,7 @@ class CustomWhatIDoContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
-        spacing: MediaQuery.of(context).size.width * 0.01,
+        spacing: MediaQuery.of(context).size.width * 0.005,
         children: [
           const CustomWhatIDoImageWidget(),
           const Expanded(child: CustomWhatIDoContainerBody()),
