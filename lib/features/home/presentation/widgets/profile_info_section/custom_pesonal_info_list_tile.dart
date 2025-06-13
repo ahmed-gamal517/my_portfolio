@@ -25,12 +25,14 @@ class CustomPersonalInfoListTile extends StatelessWidget {
         ),
         SizedBox(width: MediaQuery.of(context).size.width * 0.01),
         Expanded(
-          child: AutoSizeText(
-            text,
-            maxFontSize: 10,
-            minFontSize: 8,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.labelMedium,
+          child: Center(
+            child: AutoSizeText(
+              text,
+              maxFontSize: 12,
+              minFontSize: 8,
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(context).textTheme.labelMedium,
+            ),
           ),
         ),
       ],

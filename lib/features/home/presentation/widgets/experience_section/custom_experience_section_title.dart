@@ -9,7 +9,7 @@ class CustomExperienceSectionTitle extends StatelessWidget {
     return AutoSizeText(
       text,
       maxFontSize: 28,
-      minFontSize: 18,
+      minFontSize: 22,
       style: Theme.of(context).textTheme.titleMedium,
     );
   }

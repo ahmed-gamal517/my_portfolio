@@ -8,7 +8,6 @@ class CustomEducationContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.15,
       width: MediaQuery.of(context).size.height * 0.45,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.01),
       decoration: BoxDecoration(
@@ -18,6 +17,7 @@ class CustomEducationContainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: MediaQuery.of(context).size.height * 0.01,
         children: [
           AutoSizeText(
             AppStrings.universityGraduationYear,

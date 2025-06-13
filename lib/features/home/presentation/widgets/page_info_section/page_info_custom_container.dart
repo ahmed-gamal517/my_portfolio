@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_portofolio/core/constants/app_colors.dart';
 import 'package:my_portofolio/core/constants/app_constants.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/app_cubit/app_cubit.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
@@ -31,7 +32,7 @@ class PageInfoCustomContainer extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             color:
                 isPressed
-                    ? const Color(0xffB7A261)
+                    ? AppColors.primarylightModeColor
                     : BlocProvider.of<ThemeCubit>(context).isDark
                     ? const Color(0xff3B3729)
                     : Theme.of(context).scaffoldBackgroundColor,
