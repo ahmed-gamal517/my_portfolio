@@ -30,17 +30,17 @@ class AppThemes {
         color: Colors.white,
       ), //Personal Title and info
       headlineMedium: AppTextStyles.sigmarBold, //Button
-      labelSmall: AppTextStyles.poppinsMedium.copyWith(
+      labelSmall: AppTextStyles.firaSansMedium.copyWith(
         color: Colors.white,
       ), //Page Info
-      titleMedium: AppTextStyles.poppinsBold.copyWith(
+      titleMedium: AppTextStyles.firaSansBold.copyWith(
         color: Colors.white,
       ), //About Me Title
-      bodyMedium: AppTextStyles.poppinsRegular.copyWith(
+      bodyMedium: AppTextStyles.firaSansRegular.copyWith(
         color: Colors.white,
       ), //About Me Body
-      bodyLarge: AppTextStyles.poppinsSemiBold.copyWith(color: Colors.white),
+      bodyLarge: AppTextStyles.firaSansSemiBold.copyWith(color: Colors.white),
     ),
-    primaryColor: AppColors.titleTextColor,
+    primaryColor: AppColors.darkBackground,
   );
 }

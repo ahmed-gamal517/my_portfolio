@@ -39,7 +39,7 @@ class ProfileInfoSectionBody extends StatelessWidget {
                   return CustomPersonalInfoContainer(
                     containerColor:
                         BlocProvider.of<ThemeCubit>(context).isDark
-                            ? const Color(0xff3B3729)
+                            ? AppColors.primarydarkModeColor
                             : AppColors.lightContainerColor,
                   );
                 },

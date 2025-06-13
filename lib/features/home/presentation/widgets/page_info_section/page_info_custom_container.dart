@@ -30,12 +30,7 @@ class PageInfoCustomContainer extends StatelessWidget {
           width: MediaQuery.of(context).size.height * 0.10,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color:
-                isPressed
-                    ? AppColors.primarylightModeColor
-                    : BlocProvider.of<ThemeCubit>(context).isDark
-                    ? const Color(0xff3B3729)
-                    : Theme.of(context).scaffoldBackgroundColor,
+            color: getContainerColor(context, isPressed),
           ),
           padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.002),
           child: Column(
@@ -76,5 +71,21 @@ class PageInfoCustomContainer extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color getContainerColor(BuildContext context, bool isPressed) {
+    if (BlocProvider.of<ThemeCubit>(context).isDark) {
+      if (isPressed) {
+        return AppColors.primarydarkModeColor;
+      } else {
+        return AppColors.darkBackground;
+      }
+    } else {
+      if (isPressed) {
+        return AppColors.primarylightModeColor;
+      } else {
+        return Theme.of(context).scaffoldBackgroundColor;
+      }
+    }
   }
 }

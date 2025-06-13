@@ -23,11 +23,13 @@ class AboutMeSectionBody extends StatelessWidget {
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           Expanded(
-            child: AutoSizeText(
-              AppStrings.aboutMeSectionBody,
-              maxFontSize: 20,
-              minFontSize: 8,
-              style: Theme.of(context).textTheme.bodyMedium,
+            child: SingleChildScrollView(
+              child: AutoSizeText(
+                AppStrings.aboutMeSectionBody,
+                maxFontSize: 20,
+                minFontSize: 12,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),

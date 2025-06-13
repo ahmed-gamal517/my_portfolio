@@ -24,7 +24,9 @@ class CustomHomeScreenAppBar extends StatelessWidget {
             maxFontSize: 28,
             minFontSize: 24,
 
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+              color: Theme.of(context).primaryColor,
+            ),
           ),
           InkWell(
             onTap: () {

@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/core/constants/app_colors.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
+import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 
 class CustomProfileInfoButton extends StatelessWidget {
   const CustomProfileInfoButton({super.key});
@@ -22,7 +24,10 @@ class CustomProfileInfoButton extends StatelessWidget {
       highlightElevation: 0,
       hoverElevation: 0,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.025),
-      color: AppColors.btnColor,
+      color:
+          BlocProvider.of<ThemeCubit>(context).isDark
+              ? AppColors.primarydarkModeColor
+              : AppColors.btnColor,
       child: AutoSizeText(
         AppStrings.btnText,
         maxFontSize: 14,
