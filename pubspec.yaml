@@ -88,6 +88,16 @@ flutter:
           weight: 600
         - asset: assets/fonts/Poppins/Poppins-Bold.ttf
           weight: 700
+    - family: Fira_Sans
+      fonts:
+        - asset: assets/fonts/Fira_Sans/FiraSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Fira_Sans/FiraSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Fira_Sans/FiraSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Fira_Sans/FiraSans-Bold.ttf
+          weight: 700
     - family: Sigmar_One
       fonts:
         - asset: assets/fonts/Sigmar_One/SigmarOne-Regular.ttf

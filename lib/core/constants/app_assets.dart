@@ -1,4 +1,9 @@
 class AppAssets {
+  // backgrounds
+  static const String lightBackground = 'assets/images/light_background.jpg';
+  static const String darkBackground = 'assets/images/background.jpg';
+  // icons
+
   static const String lightSvgIcon = 'assets/icons/light.svg';
   static const String linkedInIcon = 'assets/icons/linkedin.svg';
   static const String mailIcon = 'assets/icons/mail.svg';

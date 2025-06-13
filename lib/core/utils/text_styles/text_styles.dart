@@ -42,6 +42,26 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: Colors.black,
   );
+  static TextStyle firaSansRegular = const TextStyle(
+    fontFamily: 'Fira_Sans',
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+  );
+  static TextStyle firaSansSemiBold = const TextStyle(
+    fontFamily: 'Fira_Sans',
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
+  static TextStyle firaSansMedium = const TextStyle(
+    fontFamily: 'Fira_Sans',
+    fontWeight: FontWeight.w500,
+    color: Colors.black,
+  );
+  static TextStyle firaSansBold = const TextStyle(
+    fontFamily: 'Fira_Sans',
+    fontWeight: FontWeight.w700,
+    color: Colors.black,
+  );
 
   // static double getResponsiveFontSize(BuildContext context, double fontSize) {
   //   double scaleFactor = getScaleFactor(context);

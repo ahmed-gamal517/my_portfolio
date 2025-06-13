@@ -11,10 +11,10 @@ class AppThemes {
       labelLarge: AppTextStyles.personalName, //Personal Name
       labelMedium: AppTextStyles.personalTitle, //Personal Title and info
       headlineMedium: AppTextStyles.sigmarBold, //Button
-      labelSmall: AppTextStyles.poppinsMedium, //Page Info
-      titleMedium: AppTextStyles.poppinsBold, //About Me Title
-      bodyMedium: AppTextStyles.poppinsRegular, //About Me Body
-      bodyLarge: AppTextStyles.poppinsSemiBold,
+      labelSmall: AppTextStyles.firaSansMedium, //Page Info
+      titleMedium: AppTextStyles.firaSansBold, //About Me Title
+      bodyMedium: AppTextStyles.firaSansRegular, //About Me Body
+      bodyLarge: AppTextStyles.firaSansSemiBold,
     ),
     primaryColor: AppColors.titleTextColor,
   );
