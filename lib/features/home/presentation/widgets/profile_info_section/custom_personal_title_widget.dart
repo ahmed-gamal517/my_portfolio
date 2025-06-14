@@ -26,7 +26,7 @@ class CustomPersonalTitleWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             color:
                 BlocProvider.of<ThemeCubit>(context).isDark
-                    ? const Color(0xff272522)
+                    ? AppColors.primarydarkModeColor
                     : AppColors.lightBackground,
           ),
           child: AutoSizeText(

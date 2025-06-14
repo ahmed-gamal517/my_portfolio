@@ -9,36 +9,46 @@ import 'package:my_portofolio/features/home/presentation/widgets/desktop_home_sc
 import 'package:my_portofolio/features/home/presentation/widgets/mobile_home_screen/home_screen_mobile_view.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/tablet_home_screen/home_screen_tablet_view.dart';
 
-class HomeScreenViewBody extends StatelessWidget {
+class HomeScreenViewBody extends StatefulWidget {
   const HomeScreenViewBody({super.key});
+
+  @override
+  State<HomeScreenViewBody> createState() => _HomeScreenViewBodyState();
+}
+
+class _HomeScreenViewBodyState extends State<HomeScreenViewBody> {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(const AssetImage(AppAssets.lightBackground), context);
+    precacheImage(const AssetImage(AppAssets.darkBackground), context);
+  }
 
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: BlocBuilder<ThemeCubit, ThemeState>(
-        builder: (context, state) {
-          return Container(
-            decoration: BoxDecoration(
-              color: Colors.transparent,
-              image: DecorationImage(
-                image:
-                    BlocProvider.of<ThemeCubit>(context).isDark
-                        ? const AssetImage(AppAssets.darkBackground)
-                        : const AssetImage(AppAssets.lightBackground),
-
-                fit: BoxFit.cover,
+    return BlocBuilder<ThemeCubit, ThemeState>(
+      builder: (context, state) {
+        final isDark = context.read<ThemeCubit>().isDark;
+        return DecoratedBox(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                isDark ? AppAssets.darkBackground : AppAssets.lightBackground,
               ),
+              fit: BoxFit.cover,
             ),
-            child: AdaptiveLayout(
-              mobileLayout: (context) => const HomeScreenMobileView(),
-              tabletLayout: (context) => const HomeScreenTabletView(),
-              desktopLayout: (context) => const HomeScreenDesktopView(),
+          ),
+          child: Scaffold(
+            backgroundColor: Colors.transparent,
+            body: AdaptiveLayout(
+              mobileLayout: (_) => const HomeScreenMobileView(),
+              tabletLayout: (_) => const HomeScreenTabletView(),
+              desktopLayout: (_) => const HomeScreenDesktopView(),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
