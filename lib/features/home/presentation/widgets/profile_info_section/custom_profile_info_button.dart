@@ -6,12 +6,12 @@ import 'package:my_portofolio/core/constants/app_strings.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 
 class CustomProfileInfoButton extends StatelessWidget {
-  const CustomProfileInfoButton({super.key});
-
+  const CustomProfileInfoButton({super.key, this.onPressed});
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: onPressed,
       height: MediaQuery.of(context).size.height * 0.05,
       minWidth: MediaQuery.of(context).size.width * 0.15,
       shape: RoundedRectangleBorder(

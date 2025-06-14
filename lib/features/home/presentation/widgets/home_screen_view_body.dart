@@ -21,6 +21,7 @@ class HomeScreenViewBody extends StatelessWidget {
         builder: (context, state) {
           return Container(
             decoration: BoxDecoration(
+              color: Colors.transparent,
               image: DecorationImage(
                 image:
                     BlocProvider.of<ThemeCubit>(context).isDark

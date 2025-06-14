@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/core/constants/app_colors.dart';
+import 'package:my_portofolio/core/constants/app_constants.dart';
+import 'package:my_portofolio/core/functions/openLink.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_state.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
@@ -45,7 +47,7 @@ class ProfileInfoSectionBody extends StatelessWidget {
                 },
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-              const CustomProfileInfoButton(),
+              CustomProfileInfoButton(onPressed: () => openLink(cvLink)),
             ],
           ),
         ),

@@ -100,3 +100,6 @@ List<SkillsModel> toolsAndSoftware = [
   SkillsModel(name: 'Postman', iconPath: AppAssets.postmanLogo),
   SkillsModel(name: 'Figma', iconPath: AppAssets.figmaIcon),
 ];
+
+const String cvLink =
+    'https://drive.google.com/file/d/1wupLGdZxWkhg89XTXXFcYP7P1tWlnyzR/view?usp=sharing';
