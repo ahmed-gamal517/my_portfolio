@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:my_portofolio/core/functions/openLink.dart';
 import 'package:my_portofolio/core/utils/size_config/size_config.dart';
 import 'package:my_portofolio/features/home/data/models/projects_model.dart';
 
@@ -32,7 +33,7 @@ class CustomProjectsContainer extends StatelessWidget {
               color: Colors.white,
               image: DecorationImage(
                 image: AssetImage(project.imagePath),
-                fit: BoxFit.scaleDown,
+                fit: BoxFit.fitWidth,
               ),
             ),
           ),
@@ -49,13 +50,16 @@ class CustomProjectsContainer extends StatelessWidget {
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          AutoSizeText(
-            project.linkText,
-            maxFontSize: 16,
-            minFontSize: 14,
-            style: Theme.of(context).textTheme.labelSmall!.copyWith(
-              decoration: TextDecoration.underline,
-              color: const Color(0xff0018F0),
+          InkWell(
+            onTap: () => openLink(project.link),
+            child: AutoSizeText(
+              project.linkText,
+              maxFontSize: 16,
+              minFontSize: 14,
+              style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                decoration: TextDecoration.underline,
+                color: const Color(0xff0018F0),
+              ),
             ),
           ),
         ],

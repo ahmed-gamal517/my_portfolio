@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_assets.dart';
-import 'package:my_portofolio/core/fuctions/show_image_dialog.dart';
+import 'package:my_portofolio/core/functions/show_image_dialog.dart';
 import 'package:my_portofolio/core/utils/size_config/size_config.dart';
 
 class CustomProfileImageWidget extends StatelessWidget {

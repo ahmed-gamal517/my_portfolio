@@ -56,25 +56,25 @@ List<ProjectsModel> projectsList = [
   ProjectsModel(
     title: 'QuickMart E-Commerce App',
     linkText: 'GitHub',
-    imagePath: AppAssets.flutterLogo,
+    imagePath: 'assets/images/quickmart_project.jpg',
     link: 'https://github.com/ahmed-gamal517/Afwra-QuickMart-Ecommerce-App',
   ),
   ProjectsModel(
     title: 'Out Or Not Ai Weather App',
     linkText: 'GitHub',
-    imagePath: AppAssets.flutterLogo,
+    imagePath: 'assets/images/out_or_not_project.png',
     link: 'https://github.com/ahmed-gamal517/weather-ai-app',
   ),
   ProjectsModel(
     title: 'Feastly Ai Food Recommendation App',
     linkText: 'GitHub',
-    imagePath: AppAssets.flutterLogo,
+    imagePath: 'assets/images/feastly_project.png',
     link: 'https://github.com/Galal-20/feastly',
   ),
   ProjectsModel(
     title: 'Cattosa Animal Sound Identification App',
     linkText: 'GitHub',
-    imagePath: AppAssets.flutterLogo,
+    imagePath: 'assets/images/cattoosa_project.png',
     link: 'https://github.com/ahmed-gamal517/cattoosa',
   ),
 ];
