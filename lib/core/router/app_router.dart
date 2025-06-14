@@ -7,7 +7,7 @@ abstract class AppRoutes {
   static const kHomeScreen = '/home';
 
   static final router = GoRouter(
-    initialLocation: AppRoutes.kHomeScreen,
+    initialLocation: AppRoutes.kSplashScreen,
     routes: [
       GoRoute(
         path: kSplashScreen,
