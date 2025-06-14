@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/contact_section/custom_contact_section_text_field.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_profile_info_button.dart';
 
 class ContactSectionViewBody extends StatelessWidget {
   const ContactSectionViewBody({super.key, this.height});
@@ -13,6 +14,8 @@ class ContactSectionViewBody extends StatelessWidget {
       height: height,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
       child: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
+
         slivers: [
           SliverToBoxAdapter(
             child: AutoSizeText(
@@ -69,7 +72,23 @@ class ContactSectionViewBody extends StatelessWidget {
           const SliverToBoxAdapter(
             child: CustomContactSectionTextField(maxLines: 5),
           ),
-          const SliverFillRemaining(hasScrollBody: false, child: SizedBox()),
+          SliverToBoxAdapter(
+            child: SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+          ),
+          SliverToBoxAdapter(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  child: CustomProfileInfoButton(
+                    onPressed: () {},
+                    btnText: AppStrings.contactMe,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

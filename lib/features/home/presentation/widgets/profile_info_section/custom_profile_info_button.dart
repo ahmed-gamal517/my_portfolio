@@ -2,12 +2,16 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/core/constants/app_colors.dart';
-import 'package:my_portofolio/core/constants/app_strings.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 
 class CustomProfileInfoButton extends StatelessWidget {
-  const CustomProfileInfoButton({super.key, this.onPressed});
+  const CustomProfileInfoButton({
+    super.key,
+    this.onPressed,
+    required this.btnText,
+  });
   final void Function()? onPressed;
+  final String btnText;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
@@ -29,7 +33,7 @@ class CustomProfileInfoButton extends StatelessWidget {
               ? AppColors.primarydarkModeColor
               : AppColors.btnColor,
       child: AutoSizeText(
-        AppStrings.btnText,
+        btnText,
         maxFontSize: 14,
         minFontSize: 10,
         style: Theme.of(context).textTheme.headlineMedium,

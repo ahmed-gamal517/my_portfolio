@@ -41,4 +41,5 @@ With a solid foundation in both theory and practice, I am now actively seeking o
   static const String email = 'Email Address';
   static const String subject = 'Subject';
   static const String message = 'Message';
+  static const String contactMe = 'Contact Me';
 }
