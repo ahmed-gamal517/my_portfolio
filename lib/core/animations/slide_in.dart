@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 enum SlideDirection { top, bottom, left, right }
 
@@ -24,6 +25,7 @@ class _SlideInWidgetState extends State<SlideInWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<Offset> _animation;
+  bool _hasAnimated = false;
 
   Offset getOffsetFromDirection(SlideDirection direction) {
     switch (direction) {
@@ -47,8 +49,13 @@ class _SlideInWidgetState extends State<SlideInWidget>
       begin: getOffsetFromDirection(widget.direction),
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: _controller, curve: widget.curve));
+  }
 
-    _controller.forward();
+  void _triggerAnimation() {
+    if (!_hasAnimated) {
+      _controller.forward();
+      _hasAnimated = true;
+    }
   }
 
   @override
@@ -59,6 +66,20 @@ class _SlideInWidgetState extends State<SlideInWidget>
 
   @override
   Widget build(BuildContext context) {
-    return SlideTransition(position: _animation, child: widget.child);
+    return VisibilityDetector(
+      key: widget.key ?? UniqueKey(),
+      onVisibilityChanged: (info) {
+        if (info.visibleFraction > 0.1) _triggerAnimation();
+      },
+      child: AnimatedBuilder(
+        animation: _controller,
+        builder:
+            (context, child) => SlideTransition(
+              position: _animation,
+              child: Opacity(opacity: _hasAnimated ? 1.0 : 0.0, child: child),
+            ),
+        child: widget.child,
+      ),
+    );
   }
 }

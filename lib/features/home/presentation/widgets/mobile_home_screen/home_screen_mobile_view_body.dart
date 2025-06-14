@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portofolio/core/animations/slide_in.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/about_me_section/about_me_section_body.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/contact_section/contact_section_view.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_home_screen_app_bar.dart';
@@ -16,41 +17,63 @@ class HomeScreenMobileViewBody extends StatelessWidget {
       child: CustomScrollView(
         physics: const BouncingScrollPhysics(),
         slivers: [
-          const SliverToBoxAdapter(child: CustomHomeScreenAppBar()),
+          const SliverToBoxAdapter(
+            child: SlideInWidget(
+              direction: SlideDirection.top,
+              child: CustomHomeScreenAppBar(),
+            ),
+          ),
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.1),
           ),
-          const SliverToBoxAdapter(child: ProfileInfoSectionBody()),
-          SliverToBoxAdapter(
-            child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-          ),
-          SliverToBoxAdapter(
-            child: AboutMeSectionBody(
-              height: MediaQuery.of(context).size.height * 0.8,
+          const SliverToBoxAdapter(
+            child: SlideInWidget(
+              direction: SlideDirection.left,
+              child: ProfileInfoSectionBody(),
             ),
           ),
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ),
           SliverToBoxAdapter(
-            child: ProjectsSectionView(
-              height: MediaQuery.of(context).size.height * 0.8,
+            child: SlideInWidget(
+              direction: SlideDirection.right,
+              child: AboutMeSectionBody(
+                height: MediaQuery.of(context).size.height * 0.8,
+              ),
             ),
           ),
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ),
           SliverToBoxAdapter(
-            child: SkillsSectionView(
-              height: MediaQuery.of(context).size.height * 0.8,
+            child: SlideInWidget(
+              direction: SlideDirection.left,
+              child: ProjectsSectionView(
+                height: MediaQuery.of(context).size.height * 0.8,
+              ),
             ),
           ),
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ),
           SliverToBoxAdapter(
-            child: ContactSectionView(
-              height: MediaQuery.of(context).size.height * 0.8,
+            child: SlideInWidget(
+              direction: SlideDirection.right,
+              child: SkillsSectionView(
+                height: MediaQuery.of(context).size.height * 0.8,
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          ),
+          SliverToBoxAdapter(
+            child: SlideInWidget(
+              direction: SlideDirection.bottom,
+              child: ContactSectionView(
+                height: MediaQuery.of(context).size.height * 0.8,
+              ),
             ),
           ),
         ],

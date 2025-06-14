@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portofolio/core/animations/slide_in.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_main_body_carousel_slider.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/profile_info_section_body.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/tablet_home_screen/custom_animated_smooth_indicator.dart';
@@ -16,9 +17,21 @@ class HomeScreeenTabletMainRow extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Expanded(flex: 1, child: ProfileInfoSectionBody()),
+          const Expanded(
+            flex: 1,
+            child: SlideInWidget(
+              direction: SlideDirection.left,
+              child: ProfileInfoSectionBody(),
+            ),
+          ),
           SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-          const Expanded(flex: 3, child: CustomMainBodyCarouselSlider()),
+          const Expanded(
+            flex: 3,
+            child: SlideInWidget(
+              direction: SlideDirection.bottom,
+              child: CustomMainBodyCarouselSlider(),
+            ),
+          ),
           SizedBox(width: MediaQuery.of(context).size.width * 0.03),
           const CustomAnimatedSmoothIndicator(),
         ],
