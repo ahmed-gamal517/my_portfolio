@@ -36,7 +36,9 @@ class CustomHomeScreenAppBar extends StatelessWidget {
               backgroundColor: Theme.of(context).primaryColor,
               radius: 20,
               child: SvgPicture.asset(
-                AppAssets.lightSvgIcon,
+                BlocProvider.of<ThemeCubit>(context).isDark
+                    ? AppAssets.darkSvgIcon
+                    : AppAssets.lightSvgIcon,
                 fit: BoxFit.cover,
               ),
             ),

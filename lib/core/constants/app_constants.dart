@@ -18,13 +18,18 @@ List<SocialMediaModel> socialMediaList = [
     link: 'https://github.com/ahmed-gamal517',
     borderColor: Colors.black,
   ),
+  SocialMediaModel(
+    logoPath: AppAssets.whatsAppIcon,
+    link: 'https://wa.me/+201018468569',
+    borderColor: Colors.green,
+  ),
 ];
 
 List<PersonalInfoModel> personalInfoList = [
-  PersonalInfoModel(logoPath: AppAssets.phoneIcon, text: '+20 01018468569'),
+  PersonalInfoModel(logoPath: AppAssets.phoneIcon, text: '+20 1018468569'),
   PersonalInfoModel(
     logoPath: AppAssets.mailIcon,
-    text: 'Ahmedgamal5179@gmail.com',
+    text: 'ahmedgamal5179@gmail.com',
   ),
   PersonalInfoModel(logoPath: AppAssets.gpsIcon, text: 'Cairo, Egypt'),
   PersonalInfoModel(logoPath: AppAssets.calenderIcon, text: '1, Jan. 2001'),

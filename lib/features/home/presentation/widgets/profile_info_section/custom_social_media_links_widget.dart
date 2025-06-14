@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portofolio/core/constants/app_constants.dart';
-import 'package:my_portofolio/core/functions/openLink.dart';
+import 'package:my_portofolio/core/functions/open_link.dart';
 
 class CustomSocialMediaLinksWidget extends StatelessWidget {
   const CustomSocialMediaLinksWidget({super.key});

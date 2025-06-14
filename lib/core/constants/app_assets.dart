@@ -3,7 +3,7 @@ class AppAssets {
   static const String lightBackground = 'assets/images/light_background.jpg';
   static const String darkBackground = 'assets/images/background.jpg';
   // icons
-
+  static const String darkSvgIcon = 'assets/icons/dark.svg';
   static const String lightSvgIcon = 'assets/icons/light.svg';
   static const String linkedInIcon = 'assets/icons/linkedin.svg';
   static const String mailIcon = 'assets/icons/mail.svg';
@@ -11,6 +11,7 @@ class AppAssets {
   static const String gpsIcon = 'assets/icons/location.svg';
   static const String calenderIcon = 'assets/icons/calender.svg';
   static const String gitHubIcon = 'assets/icons/github.svg';
+  static const String whatsAppIcon = 'assets/icons/whatsapp.svg';
   static const String aboutIcon = 'assets/icons/profile.svg';
   static const String expericeIcon = 'assets/icons/experience.svg';
   static const String projectsIcon = 'assets/icons/projects.svg';

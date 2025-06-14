@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:my_portofolio/core/functions/openLink.dart';
+import 'package:my_portofolio/core/functions/open_link.dart';
 import 'package:my_portofolio/core/utils/size_config/size_config.dart';
 import 'package:my_portofolio/features/home/data/models/projects_model.dart';
 

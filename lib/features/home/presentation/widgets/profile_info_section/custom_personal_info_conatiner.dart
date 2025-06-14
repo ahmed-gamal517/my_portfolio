@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_constants.dart';
+import 'package:my_portofolio/core/functions/open_link.dart';
 import 'package:my_portofolio/core/utils/size_config/size_config.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_pesonal_info_list_tile.dart';
 
@@ -29,10 +30,21 @@ class CustomPersonalInfoContainer extends StatelessWidget {
             child: CustomPersonalInfoListTile(
               iconPath: personalInfoList[index].logoPath,
               text: personalInfoList[index].text,
+              onTap: () => openLinkLogic(index),
             ),
           ),
         ),
       ),
     );
+  }
+
+  void openLinkLogic(int index) {
+    if (index == 0) {
+      openPhoneLink(personalInfoList[index].text);
+    } else if (index == 1) {
+      openEmailLink(personalInfoList[index].text);
+    } else if (index == 2) {
+      openLocationLink(personalInfoList[index].text);
+    }
   }
 }
