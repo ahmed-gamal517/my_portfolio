@@ -6,6 +6,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write     # 🛠 give push permission
+      pages: write        # grants publishing to GitHub Pages
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
