@@ -50,7 +50,7 @@ class _SplashScreenViewBodyState extends State<SplashScreenViewBody>
           },
           child: SizedBox(
             height: MediaQuery.of(context).size.height * 0.4,
-            child: AspectRatio(
+            child: const AspectRatio(
               aspectRatio: 1,
               child: Image(
                 image: AssetImage('assets/images/app_logo.png'),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/app_cubit/app_cubit.dart';
+import 'package:my_portofolio/features/home/presentation/view_model/app_cubit/app_state.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
