@@ -63,11 +63,12 @@ class HomeScreenMobileViewBody extends StatelessWidget {
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SlideInWidget(
               direction: SlideDirection.bottom,
               child: ContactSectionView(
-                height: MediaQuery.of(context).size.height * 0.8,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
               ),
             ),
           ),

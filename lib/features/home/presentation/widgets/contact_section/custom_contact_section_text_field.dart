@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CustomContactSectionTextField extends StatelessWidget {
-  const CustomContactSectionTextField({super.key, this.maxLines = 1});
+  const CustomContactSectionTextField({
+    super.key,
+    this.maxLines = 1,
+    this.validator,
+  });
   final int maxLines;
+  final String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: validator,
       maxLines: maxLines,
+      style: Theme.of(context).textTheme.bodyMedium,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
