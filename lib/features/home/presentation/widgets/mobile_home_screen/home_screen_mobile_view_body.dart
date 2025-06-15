@@ -4,8 +4,9 @@ import 'package:my_portofolio/features/home/presentation/widgets/about_me_sectio
 import 'package:my_portofolio/features/home/presentation/widgets/contact_section/contact_section_view.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_home_screen_app_bar.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/profile_info_section_body.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/projects_section/mobile_projects_section_view_body.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/projects_section/projects_section_view.dart';
-import 'package:my_portofolio/features/home/presentation/widgets/skills_section/skills_section_view.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/skills_section/mobile_skills_section_view_body.dart';
 
 class HomeScreenMobileViewBody extends StatelessWidget {
   const HomeScreenMobileViewBody({super.key});
@@ -15,6 +16,7 @@ class HomeScreenMobileViewBody extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.03),
       child: CustomScrollView(
+        shrinkWrap: true,
         physics: const BouncingScrollPhysics(),
         slivers: [
           const SliverToBoxAdapter(
@@ -46,23 +48,19 @@ class HomeScreenMobileViewBody extends StatelessWidget {
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SlideInWidget(
               direction: SlideDirection.left,
-              child: ProjectsSectionView(
-                height: MediaQuery.of(context).size.height * 0.8,
-              ),
+              child: MobileProjectsSectionViewBody(),
             ),
           ),
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SlideInWidget(
               direction: SlideDirection.right,
-              child: SkillsSectionView(
-                height: MediaQuery.of(context).size.height * 0.8,
-              ),
+              child: MobileSkillsSectionViewBody(),
             ),
           ),
           SliverToBoxAdapter(
@@ -77,20 +75,6 @@ class HomeScreenMobileViewBody extends StatelessWidget {
             ),
           ),
         ],
-        // child: Padding(
-        //   padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
-        //   child: Column(
-        //     spacing: MediaQuery.of(context).size.height * 0.05,
-        //     children: [
-        //       CustomHomeScreenAppBar(),
-        //       ProfileInfoSectionBody(),
-        //       const ExperienceView(),
-        //       const ProjectsSectionView(),
-        //       const SkillsSectionView(),
-        //       const ContactSectionView(),
-        //     ],
-        //   ),
-        // ),
       ),
     );
   }

@@ -33,7 +33,7 @@ class CustomProjectsContainer extends StatelessWidget {
               color: Colors.white,
               image: DecorationImage(
                 image: AssetImage(project.imagePath),
-                fit: BoxFit.fitWidth,
+                fit: BoxFit.scaleDown,
               ),
             ),
           ),
