@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/animations/slide_in.dart';
-import 'package:my_portofolio/features/home/presentation/widgets/about_me_section/about_me_section_body.dart';
+import 'package:my_portofolio/features/home/presentation/widgets/about_me_section/mobile_about_me_section_body.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/contact_section/contact_section_view.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_home_screen_app_bar.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/profile_info_section_body.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/projects_section/mobile_projects_section_view_body.dart';
-import 'package:my_portofolio/features/home/presentation/widgets/projects_section/projects_section_view.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/skills_section/mobile_skills_section_view_body.dart';
 
 class HomeScreenMobileViewBody extends StatelessWidget {
@@ -37,12 +36,10 @@ class HomeScreenMobileViewBody extends StatelessWidget {
           SliverToBoxAdapter(
             child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SlideInWidget(
               direction: SlideDirection.right,
-              child: AboutMeSectionBody(
-                height: MediaQuery.of(context).size.height * 0.8,
-              ),
+              child: MobileAboutMeSectionBody(),
             ),
           ),
           SliverToBoxAdapter(

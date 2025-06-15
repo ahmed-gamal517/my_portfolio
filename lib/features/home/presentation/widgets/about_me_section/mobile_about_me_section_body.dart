@@ -1,41 +1,35 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
+import 'package:my_portofolio/core/widgets/expandable_text.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/about_me_section/custom_what_i_do_container.dart';
 import 'package:my_portofolio/features/home/presentation/widgets/custom_container.dart';
 
-class AboutMeSectionBody extends StatelessWidget {
-  const AboutMeSectionBody({super.key, this.height});
-  final double? height;
+class MobileAboutMeSectionBody extends StatelessWidget {
+  const MobileAboutMeSectionBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return CustomContainer(
-      height: height,
       padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.03),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AutoSizeText(
             AppStrings.aboutMeSectionTitle,
-            maxFontSize: 40,
+            maxFontSize: 28,
             minFontSize: 22,
             style: Theme.of(context).textTheme.titleMedium,
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          Expanded(
-            child: SingleChildScrollView(
-              child: AutoSizeText(
-                AppStrings.aboutMeSectionBody,
-                maxFontSize: 32,
-                minFontSize: 12,
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-            ),
+          const ExpandableText(
+            text: AppStrings.aboutMeSectionBody,
+            trimLines: 4,
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           AutoSizeText(
             AppStrings.aboutMeSectionTitle2,
-            maxFontSize: 40,
+            maxFontSize: 28,
             minFontSize: 22,
             style: Theme.of(context).textTheme.titleMedium,
           ),
