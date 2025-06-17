@@ -32,7 +32,7 @@ class CustomPersonalInfoListTile extends StatelessWidget {
             child: Center(
               child: AutoSizeText(
                 text,
-                maxFontSize: 12,
+                maxFontSize: 22,
                 minFontSize: 8,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.labelMedium,

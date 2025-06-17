@@ -31,7 +31,7 @@ class CustomPersonalTitleWidget extends StatelessWidget {
           ),
           child: AutoSizeText(
             AppStrings.personalTitle,
-            maxFontSize: 14,
+            maxFontSize: 22,
             style: Theme.of(context).textTheme.labelMedium,
           ),
         );

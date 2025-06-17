@@ -30,7 +30,7 @@ class HomeScreenMobileViewBody extends StatelessWidget {
           const SliverToBoxAdapter(
             child: SlideInWidget(
               direction: SlideDirection.left,
-              child: ProfileInfoSectionBody(),
+              child: ProfileInfoSectionBody(isMobile: true),
             ),
           ),
           SliverToBoxAdapter(

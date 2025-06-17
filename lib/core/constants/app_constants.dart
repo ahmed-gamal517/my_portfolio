@@ -107,4 +107,4 @@ List<SkillsModel> toolsAndSoftware = [
 ];
 
 const String cvLink =
-    'https://drive.google.com/file/d/1wupLGdZxWkhg89XTXXFcYP7P1tWlnyzR/view?usp=sharing';
+    'https://drive.google.com/file/d/19olVAPUE7dQ1cue18kSUeJlkRnlDauJj/view?usp=sharing';

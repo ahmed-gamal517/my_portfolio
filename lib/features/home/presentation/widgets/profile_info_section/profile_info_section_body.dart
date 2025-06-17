@@ -16,8 +16,8 @@ import 'package:my_portofolio/features/home/presentation/widgets/profile_info_se
 import 'package:my_portofolio/features/home/presentation/widgets/profile_info_section/custom_social_media_links_widget.dart';
 
 class ProfileInfoSectionBody extends StatelessWidget {
-  const ProfileInfoSectionBody({super.key});
-
+  const ProfileInfoSectionBody({super.key, this.isMobile = false});
+  final bool isMobile;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -29,7 +29,7 @@ class ProfileInfoSectionBody extends StatelessWidget {
           top: MediaQuery.of(context).size.height * 0.07 * -1,
           child: Column(
             children: [
-              const CustomProfileImageWidget(),
+              CustomProfileImageWidget(isMobile: isMobile),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               const CustomPersonalNameWidget(),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
@@ -40,6 +40,10 @@ class ProfileInfoSectionBody extends StatelessWidget {
               BlocBuilder<ThemeCubit, ThemeState>(
                 builder: (context, state) {
                   return CustomPersonalInfoContainer(
+                    width:
+                        isMobile
+                            ? MediaQuery.of(context).size.width * 0.7
+                            : null,
                     containerColor:
                         BlocProvider.of<ThemeCubit>(context).isDark
                             ? AppColors.primarydarkModeColor
