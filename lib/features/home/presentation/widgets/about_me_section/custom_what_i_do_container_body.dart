@@ -17,7 +17,7 @@ class CustomWhatIDoContainerBody extends StatelessWidget {
           AppStrings.whatIdo,
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
-          maxFontSize: 16,
+          maxFontSize: 26,
           minFontSize: 7,
           style: Theme.of(context).textTheme.titleMedium,
         ),
@@ -26,7 +26,7 @@ class CustomWhatIDoContainerBody extends StatelessWidget {
           child: AutoSizeText(
             AppStrings.whatIdoBody,
             minFontSize: 5,
-            maxFontSize: 12,
+            maxFontSize: 22,
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
               color:
                   BlocProvider.of<ThemeCubit>(context).isDark

@@ -16,7 +16,7 @@ class CustomProjectsGridView extends StatelessWidget {
 
     double mainAxisExtent;
     if (screenWidth < 600) {
-      mainAxisExtent = MediaQuery.of(context).size.height * 0.3;
+      mainAxisExtent = MediaQuery.of(context).size.height * 0.32;
     } else if (screenWidth < 1250) {
       mainAxisExtent = MediaQuery.of(context).size.height * 0.35;
     } else {
@@ -27,7 +27,7 @@ class CustomProjectsGridView extends StatelessWidget {
       physics: physics,
       shrinkWrap: shrinkWrap,
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 500,
+        maxCrossAxisExtent: 600,
         crossAxisSpacing: 60,
         mainAxisSpacing: 20,
         mainAxisExtent: mainAxisExtent,

@@ -24,7 +24,7 @@ class ProfileInfoSectionBody extends StatelessWidget {
       clipBehavior: Clip.none,
       alignment: Alignment.topCenter,
       children: [
-        CustomContainer(height: MediaQuery.of(context).size.height * 0.7),
+        CustomContainer(height: getContainerHeight(context)),
         Positioned(
           top: MediaQuery.of(context).size.height * 0.07 * -1,
           child: Column(
@@ -61,5 +61,18 @@ class ProfileInfoSectionBody extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  double getContainerHeight(BuildContext context) {
+    if (isMobile) {
+      if (MediaQuery.of(context).size.width >
+          MediaQuery.of(context).size.height) {
+        return MediaQuery.of(context).size.width * 0.50;
+      } else {
+        return MediaQuery.of(context).size.height * 0.75;
+      }
+    } else {
+      return MediaQuery.of(context).size.height * 0.7;
+    }
   }
 }

@@ -15,8 +15,8 @@ class CustomWhatIDoImageWidget extends StatelessWidget {
       child: ClipRRect(
         clipBehavior: Clip.antiAliasWithSaveLayer,
         borderRadius: const BorderRadiusGeometry.only(
-          bottomLeft: Radius.circular(15),
-          topLeft: Radius.circular(15),
+          bottomLeft: Radius.circular(10),
+          topLeft: Radius.circular(10),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

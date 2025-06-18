@@ -13,7 +13,6 @@ class CustomWhatIDoContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsets.zero,
       height: MediaQuery.of(context).size.height * 0.18,
-      width: MediaQuery.of(context).size.height * 0.45,
       decoration: BoxDecoration(
         border: Border.all(color: Theme.of(context).primaryColor, width: 2),
         color:
@@ -23,7 +22,7 @@ class CustomWhatIDoContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
-        spacing: MediaQuery.of(context).size.width * 0.005,
+        spacing: MediaQuery.of(context).size.height * 0.01,
         children: [
           const CustomWhatIDoImageWidget(),
           const Expanded(child: CustomWhatIDoContainerBody()),
