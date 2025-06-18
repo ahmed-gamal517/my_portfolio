@@ -85050,10 +85050,9 @@ $S:0}
 A.BH.prototype={
 F(a){var s=null,r=A.iL(s,this.Yu(a),s),q=t.w,p=A.L(a,s,q).w,o=t.p
 return A.r7(B.ir,A.b([r,A.BF(s,A.dd(A.b([new A.KZ(this.c,s),A.bf(s,A.L(a,s,q).w.a.b*0.01,s),B.GP,A.bf(s,A.L(a,s,q).w.a.b*0.01,s),B.GQ,A.bf(s,A.L(a,s,q).w.a.b*0.01,s),B.GT,A.bf(s,A.L(a,s,q).w.a.b*0.01,s),A.yc(new A.adR(this),t.c,t.bk),A.bf(s,A.L(a,s,q).w.a.b*0.01,s),new A.z3(new A.adS(),"View Resume",s)],o),B.a2,B.V,B.N,0),s,s,s,s,p.a.b*0.07*-1,s)],o),B.r,B.cU)},
-Yu(a){var s,r=null
-if(this.c){s=t.w
-if(A.L(a,r,s).w.a.a>A.L(a,r,s).w.a.b)return A.L(a,r,s).w.a.a*0.5
-else return A.L(a,r,s).w.a.b*0.75}else return A.L(a,r,t.w).w.a.b*0.7}}
+Yu(a){var s=t.w
+if(this.c)return A.L(a,null,s).w.a.b*0.8
+else return A.L(a,null,s).w.a.b*0.7}}
 A.adR.prototype={
 $2(a,b){var s=this.a.c?A.L(a,null,t.w).w.a.a*0.7:null
 return new A.tI(A.dL(a,t.c).x?B.e1:B.e5,s,null)},
