@@ -65,12 +65,7 @@ class ProfileInfoSectionBody extends StatelessWidget {
 
   double getContainerHeight(BuildContext context) {
     if (isMobile) {
-      if (MediaQuery.of(context).size.width >
-          MediaQuery.of(context).size.height) {
-        return MediaQuery.of(context).size.width * 0.50;
-      } else {
-        return MediaQuery.of(context).size.height * 0.75;
-      }
+      return MediaQuery.of(context).size.height * 0.8;
     } else {
       return MediaQuery.of(context).size.height * 0.7;
     }
