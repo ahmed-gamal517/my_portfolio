@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
@@ -6,8 +7,16 @@ import 'package:my_portofolio/core/utils/bloc_observer/bloc_observer.dart';
 import 'package:my_portofolio/core/utils/themes/app_themes.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_state.dart';
+import 'package:web/web.dart' as web;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Future.delayed(const Duration(milliseconds: 100));
+  if (kIsWeb) {
+    final splash = web.document.getElementById('splash');
+    splash?.remove();
+  }
+
   Bloc.observer = MyBlocObserver();
   runApp(BlocProvider(create: (context) => ThemeCubit(), child: const MyApp()));
 }
