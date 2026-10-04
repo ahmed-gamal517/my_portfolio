@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_portofolio/core/constants/app_strings.dart';
@@ -7,18 +6,11 @@ import 'package:my_portofolio/core/utils/bloc_observer/bloc_observer.dart';
 import 'package:my_portofolio/core/utils/themes/app_themes.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_cubit.dart';
 import 'package:my_portofolio/features/home/presentation/view_model/theme_cubit/theme_state.dart';
-import 'package:web/web.dart' as web;
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Future.delayed(const Duration(milliseconds: 100));
-  if (kIsWeb) {
-    final splash = web.document.getElementById('splash');
-    splash?.remove();
-  }
-
   Bloc.observer = MyBlocObserver();
-  runApp(BlocProvider(create: (context) => ThemeCubit(), child: const MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -26,18 +18,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeCubit, ThemeState>(
-      builder: (context, state) {
-        return MaterialApp.router(
-          title: AppStrings.appName,
-          routerConfig: AppRoutes.router,
-          debugShowCheckedModeBanner: false,
-          theme:
-              BlocProvider.of<ThemeCubit>(context).isDark
-                  ? AppThemes.darkTheme
-                  : AppThemes.lightTheme,
-        );
-      },
+    return BlocProvider(
+      create: (context) => ThemeCubit(),
+      child: BlocBuilder<ThemeCubit, ThemeState>(
+        builder: (context, state) {
+          final isDark = context.read<ThemeCubit>().isDark;
+          return MaterialApp.router(
+            title: AppStrings.appName,
+            routerConfig: AppRoutes.router,
+            debugShowCheckedModeBanner: false,
+            theme: isDark ? AppThemes.darkTheme : AppThemes.lightTheme,
+          );
+        },
+      ),
     );
   }
 }

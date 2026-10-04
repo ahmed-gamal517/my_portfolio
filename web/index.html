@@ -3,48 +3,12 @@
 <head>
   <style>
   body {
-    background-color: #121212; /* Match your app's background */
+    background-color: #0A0E17;
     margin: 0;
     overflow: hidden;
   }
+  </style>
 
-  #splash {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #121212;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-
-  .splash-logo {
-    width: 150px;
-    height: 150px;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-</style>
-
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
@@ -54,9 +18,8 @@
   <meta name="author" content="Ahmed Gamal">
 
   <meta property="og:title" content="Ahmed Gamal | Flutter Developer Portfolio">
-<meta property="og:description" content="Check out Ahmed Gamal’s developer portfolio made with Flutter Web.">
-<meta property="og:type" content="website">
-
+  <meta property="og:description" content="Check out Ahmed Gamal’s developer portfolio made with Flutter Web.">
+  <meta property="og:type" content="website">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -70,13 +33,6 @@
   <title>Ahmed Gamal Portfolio</title>
   <link rel="manifest" href="manifest.json">
 </head>
-<body>
-  <div id="splash">
-    <img src="assets/assets/images/app_logo.png" alt="Logo" class="splash-logo">
-  </div>
-  <script src="main.dart.js" type="application/javascript"></script>
-</body>
-
 <body>
   <script src="flutter_bootstrap.js" async></script>
 </body>

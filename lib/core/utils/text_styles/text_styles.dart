@@ -2,84 +2,148 @@ import 'package:flutter/material.dart';
 import 'package:my_portofolio/core/constants/app_colors.dart';
 
 abstract class AppTextStyles {
-  static TextStyle appBarTitle = const TextStyle(
-    fontFamily: 'Sigmar_One',
-    fontWeight: FontWeight.w400,
-    color: AppColors.titleTextColor,
-  );
-  static TextStyle personalName = const TextStyle(
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w700,
-    color: Colors.black,
-  );
-  static TextStyle personalTitle = const TextStyle(
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
-    color: Colors.black,
-  );
-  static TextStyle sigmarBold = const TextStyle(
-    fontFamily: 'Sigmar_One',
-    fontWeight: FontWeight.w700,
-    color: AppColors.btnTextColor,
-  );
-  static TextStyle poppinsMedium = const TextStyle(
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w500,
-    color: Colors.black,
-  );
-  static TextStyle poppinsBold = const TextStyle(
+  // Headings
+  static const TextStyle displayLarge = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w700,
-    color: Colors.black,
+    fontSize: 48,
+    letterSpacing: -1.0,
+    height: 1.15,
   );
-  static TextStyle poppinsRegular = const TextStyle(
+
+  static const TextStyle displayMedium = TextStyle(
     fontFamily: 'Poppins',
-    fontWeight: FontWeight.w400,
-    color: Colors.black,
+    fontWeight: FontWeight.w700,
+    fontSize: 36,
+    letterSpacing: -0.5,
+    height: 1.2,
   );
-  static TextStyle poppinsSemiBold = const TextStyle(
+
+  static const TextStyle headingLarge = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
-    color: Colors.black,
+    fontSize: 28,
+    letterSpacing: -0.3,
   );
-  static TextStyle firaSansRegular = const TextStyle(
-    fontFamily: 'Fira_Sans',
-    fontWeight: FontWeight.w400,
-    color: Colors.black,
-  );
-  static TextStyle firaSansSemiBold = const TextStyle(
-    fontFamily: 'Fira_Sans',
+
+  static const TextStyle headingMedium = TextStyle(
+    fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
-    color: Colors.black,
+    fontSize: 22,
   );
-  static TextStyle firaSansMedium = const TextStyle(
-    fontFamily: 'Fira_Sans',
+
+  static const TextStyle headingSmall = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    fontSize: 18,
+  );
+
+  // Body
+  static const TextStyle bodyLarge = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    height: 1.6,
+  );
+
+  static const TextStyle bodyMedium = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    height: 1.5,
+  );
+
+  static const TextStyle bodySmall = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+    fontSize: 12,
+    height: 1.4,
+  );
+
+  // Labels & Chips
+  static const TextStyle labelLarge = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    letterSpacing: 0.2,
+  );
+
+  static const TextStyle labelMedium = TextStyle(
+    fontFamily: 'Inter',
     fontWeight: FontWeight.w500,
-    color: Colors.black,
+    fontSize: 13,
   );
-  static TextStyle firaSansBold = const TextStyle(
-    fontFamily: 'Fira_Sans',
+
+  static const TextStyle labelSmall = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    fontSize: 11,
+    letterSpacing: 0.5,
+  );
+
+  // Legacy mappings for backwards-compatibility
+  static const TextStyle appBarTitle = TextStyle(
+    fontFamily: 'Poppins',
     fontWeight: FontWeight.w700,
-    color: Colors.black,
+    fontSize: 20,
+    color: AppColors.cyan,
   );
 
-  // static double getResponsiveFontSize(BuildContext context, double fontSize) {
-  //   double scaleFactor = getScaleFactor(context);
-  //   double responsiveFontSize = fontSize * scaleFactor;
-  //   double lowerLimit = fontSize * 0.8;
-  //   double upperLimit = fontSize * 1.2;
+  static const TextStyle personalName = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+    fontSize: 24,
+  );
 
-  //   return responsiveFontSize.clamp(lowerLimit, upperLimit);
-  // }
+  static const TextStyle personalTitle = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+    fontSize: 15,
+  );
 
-  // static double getScaleFactor(BuildContext context) {
-  //   double width = MediaQuery.of(context).size.width;
-  //   if (width < SizeConfig.tablet) {
-  //     return width / 550;
-  //   } else if (width < SizeConfig.desktop) {
-  //     return width / 1000;
-  //   } else {
-  //     return width / 1920;
-  //   }
-  // }
+  static const TextStyle sigmarBold = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w700,
+    fontSize: 14,
+  );
+
+  static const TextStyle poppinsMedium = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle poppinsBold = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+  );
+
+  static const TextStyle poppinsRegular = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle poppinsSemiBold = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle firaSansRegular = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+  );
+
+  static const TextStyle firaSansSemiBold = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle firaSansMedium = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle firaSansBold = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+  );
 }

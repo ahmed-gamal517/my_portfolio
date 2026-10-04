@@ -4,43 +4,74 @@ import 'package:my_portofolio/core/utils/text_styles/text_styles.dart';
 
 class AppThemes {
   static ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: AppColors.lightBackground,
+    useMaterial3: true,
     brightness: Brightness.light,
-    textTheme: TextTheme(
-      titleLarge: AppTextStyles.appBarTitle, //Website Name
-      labelLarge: AppTextStyles.personalName, //Personal Name
-      labelMedium: AppTextStyles.personalTitle, //Personal Title and info
-      headlineMedium: AppTextStyles.sigmarBold, //Button
-      labelSmall: AppTextStyles.firaSansMedium, //Page Info
-      titleMedium: AppTextStyles.firaSansBold, //About Me Title
-      bodyMedium: AppTextStyles.firaSansRegular, //About Me Body
-      bodyLarge: AppTextStyles.firaSansSemiBold,
+    scaffoldBackgroundColor: AppColors.lightBackground,
+    primaryColor: AppColors.cyanAccent,
+    colorScheme: const ColorScheme.light(
+      primary: AppColors.cyanAccent,
+      secondary: AppColors.indigo,
+      surface: AppColors.lightSurface,
+      onPrimary: Colors.white,
+      onSecondary: Colors.white,
+      onSurface: AppColors.lightTextPrimary,
     ),
-    primaryColor: AppColors.titleTextColor,
+    cardColor: AppColors.lightCard,
+    dividerColor: AppColors.lightBorder,
+    textTheme: const TextTheme(
+      displayLarge: AppTextStyles.displayLarge,
+      displayMedium: AppTextStyles.displayMedium,
+      headlineLarge: AppTextStyles.headingLarge,
+      headlineMedium: AppTextStyles.headingMedium,
+      headlineSmall: AppTextStyles.headingSmall,
+      bodyLarge: AppTextStyles.bodyLarge,
+      bodyMedium: AppTextStyles.bodyMedium,
+      bodySmall: AppTextStyles.bodySmall,
+      labelLarge: AppTextStyles.labelLarge,
+      labelMedium: AppTextStyles.labelMedium,
+      labelSmall: AppTextStyles.labelSmall,
+      // Backwards-compatibility
+      titleLarge: AppTextStyles.appBarTitle,
+      titleMedium: AppTextStyles.headingMedium,
+    ).apply(
+      bodyColor: AppColors.lightTextPrimary,
+      displayColor: AppColors.lightTextPrimary,
+    ),
   );
+
   static ThemeData darkTheme = ThemeData(
-    scaffoldBackgroundColor: AppColors.darkBackground,
+    useMaterial3: true,
     brightness: Brightness.dark,
-    textTheme: TextTheme(
-      titleLarge: AppTextStyles.appBarTitle, //Website Name
-      labelLarge: AppTextStyles.personalName.copyWith(
-        color: Colors.white,
-      ), //Personal Name
-      labelMedium: AppTextStyles.personalTitle.copyWith(
-        color: Colors.white,
-      ), //Personal Title and info
-      headlineMedium: AppTextStyles.sigmarBold, //Button
-      labelSmall: AppTextStyles.firaSansMedium.copyWith(
-        color: Colors.white,
-      ), //Page Info
-      titleMedium: AppTextStyles.firaSansBold.copyWith(
-        color: Colors.white,
-      ), //About Me Title
-      bodyMedium: AppTextStyles.firaSansRegular.copyWith(
-        color: Colors.white,
-      ), //About Me Body
-      bodyLarge: AppTextStyles.firaSansSemiBold.copyWith(color: Colors.white),
+    scaffoldBackgroundColor: AppColors.darkBackground,
+    primaryColor: AppColors.cyan,
+    colorScheme: const ColorScheme.dark(
+      primary: AppColors.cyan,
+      secondary: AppColors.indigo,
+      surface: AppColors.darkSurface,
+      onPrimary: AppColors.darkBackground,
+      onSecondary: Colors.white,
+      onSurface: AppColors.darkTextPrimary,
     ),
-    primaryColor: AppColors.darkBackground,
+    cardColor: AppColors.darkCard,
+    dividerColor: AppColors.darkBorder,
+    textTheme: const TextTheme(
+      displayLarge: AppTextStyles.displayLarge,
+      displayMedium: AppTextStyles.displayMedium,
+      headlineLarge: AppTextStyles.headingLarge,
+      headlineMedium: AppTextStyles.headingMedium,
+      headlineSmall: AppTextStyles.headingSmall,
+      bodyLarge: AppTextStyles.bodyLarge,
+      bodyMedium: AppTextStyles.bodyMedium,
+      bodySmall: AppTextStyles.bodySmall,
+      labelLarge: AppTextStyles.labelLarge,
+      labelMedium: AppTextStyles.labelMedium,
+      labelSmall: AppTextStyles.labelSmall,
+      // Backwards-compatibility
+      titleLarge: AppTextStyles.appBarTitle,
+      titleMedium: AppTextStyles.headingMedium,
+    ).apply(
+      bodyColor: AppColors.darkTextPrimary,
+      displayColor: AppColors.darkTextPrimary,
+    ),
   );
 }

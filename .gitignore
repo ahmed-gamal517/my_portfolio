@@ -1,9 +1,18 @@
-# Miscellaneous
+# Miscellaneous & OS
 *.class
 *.log
 *.pyc
 *.swp
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
 .atom/
 .build/
 .buildlog/
@@ -12,16 +21,43 @@
 .swiftpm/
 migrate_working_dir/
 
-# IntelliJ related
+# Environment Variables & Sensitive Files
+.env
+.env.*
+*.env
+key.properties
+*.jks
+*.keystore
+*.p8
+*.p12
+*.mobileprovision
+
+# Agent & AI Tooling Caches
+.agents/
+.impeccable/
+skills-lock.json
+DESIGN.md
+PRODUCT.md
+design.md
+product.md
+.gemini/
+.claude/
+.cursor/
+.windsurf/
+
+# IntelliJ & Android Studio
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -32,14 +68,46 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+.packages
 
-# Symbolication related
+# Testing & Coverage
+coverage/
+*.lcov
+test/.test_coverage.dart
+
+# Symbolication & Obfuscation
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# Android related
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/app/build/
+android/.gradle/
+android/captures/
+android/gradleBuild/
+android/.externalNativeBuild
+android/.cxx/
+local.properties
+*.apk
+*.aab
+
+# iOS & macOS related
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner.xcworkspace/xcuserdata/
+**/ios/Runner.xcodeproj/xcuserdata/
+**/ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+**/macos/Pods/
+**/macos/.symlinks/
+**/macos/Flutter/ephemeral/
+
