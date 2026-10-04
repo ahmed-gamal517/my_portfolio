@@ -1,8 +1,74 @@
 [build]
-  command = "git clone https://github.com/flutter/flutter.git --depth 1 -b stable _flutter && export PATH=\"$PATH:$PWD/_flutter/bin\" && flutter build web --release"
+  command = "if [ ! -d \"_flutter\" ]; then git clone --depth 1 -b stable https://github.com/flutter/flutter.git _flutter; else git -C _flutter pull; fi && export PATH=\"$PATH:$PWD/_flutter/bin\" && flutter config --no-analytics && flutter pub get && flutter build web --release --wasm"
   publish = "build/web"
 
+# Single-Page Application (SPA) redirect rule
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Global WebAssembly & Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Required for Flutter WebAssembly (WASM) multi-threading & WasmGC
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "credentialless"
+    # Essential security headers
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# HTML & entrypoints: Ensure new releases load instantly without stale cache
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/flutter_bootstrap.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/version.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Static assets: Long-term immutable caching for peak performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/canvaskit/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.wasm"
+  [headers.values]
+    Content-Type = "application/wasm"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

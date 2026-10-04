@@ -2,26 +2,17 @@
 <html>
 
 <head>
-  <style>
-    body {
-      background-color: #0A0E17;
-      margin: 0;
-      overflow: hidden;
-    }
-  </style>
-
   <base href="$FLUTTER_BASE_HREF">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Ahmed Gamal's personal portfolio built with Flutter. Explore projects, skills, and contact info in a sleek, responsive web app.">
   <meta name="keywords"
     content="Flutter, Portfolio, Ahmed Gamal, Developer, Software Engineer, Web Developer, Mobile App, Projects">
   <meta name="author" content="Ahmed Gamal">
 
+  <!-- Open Graph / Social Meta -->
   <meta property="og:title" content="Ahmed Gamal | Flutter Developer Portfolio">
   <meta property="og:description" content="Check out Ahmed Gamal’s developer portfolio made with Flutter Web.">
   <meta property="og:type" content="website">
@@ -29,17 +20,78 @@
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="my_portofolio">
+  <meta name="apple-mobile-web-app-title" content="Ahmed Gamal Portfolio">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>Ahmed Gamal Portfolio</title>
+  <title>Ahmed Gamal | Flutter Developer Portfolio</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0A0E17;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    #loading-container {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #0A0E17;
+      z-index: 999999;
+      transition: opacity 0.3s ease-out;
+    }
+    .spinner-ring {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(0, 229, 255, 0.12);
+      border-top-color: #00E5FF;
+      border-right-color: #6366F1;
+      border-radius: 50%;
+      animation: spin 0.8s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+    }
+    .loading-title {
+      margin-top: 18px;
+      color: #94A3B8;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div id="loading-container">
+    <div class="spinner-ring"></div>
+    <div class="loading-title">Loading Portfolio...</div>
+  </div>
+
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var loader = document.getElementById('loading-container');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(function () {
+          loader.remove();
+        }, 300);
+      }
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 
